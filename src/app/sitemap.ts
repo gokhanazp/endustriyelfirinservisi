@@ -15,6 +15,13 @@ import {
 } from "@/lib/content-dates";
 
 /**
+ * `output: "export"` ile metadata route'lari statik dosyaya yazilabilmesi
+ * icin force-static gerekiyor; aksi halde build "Collecting page data"
+ * asamasinda hata veriyor.
+ */
+export const dynamic = "force-static";
+
+/**
  * lastmod degerleri build zamanindan degil, @/lib/content-dates
  * dosyasindaki gercek icerik guncelleme tarihlerinden gelir.
  *
