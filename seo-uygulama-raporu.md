@@ -140,3 +140,45 @@ src/lib/blog/posts/*.ts (6 dosya)        12 bağlamsal iç link + meta
 4. **`lib/site.ts` → `social`** — Instagram/Facebook alanları şu an genel adresler; kullanılmayanları silin
    (JSON-LD `sameAs` alanına aynen gidiyor, boş profil linki güven sinyalini zayıflatır).
 5. **Google Business Profile** — doğrulama süreci haftalar sürebilir, ilk gün başlatın.
+
+---
+
+## 5. Cloudflare Pages dağıtımı
+
+Site tam statik olarak üretiliyor (`output: "export"`). API route, server action, ISR ve
+`next/image` kullanımı yok; 77 sayfanın tamamı build sırasında HTML'e dönüşüyor.
+İletişim formu da sunucuya değil, WhatsApp bağlantısına gidiyor.
+
+### Cloudflare Pages ayarları
+
+| Alan | Değer |
+|---|---|
+| Framework preset | **Next.js (Static HTML Export)** |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Node.js version | `22` (Environment variables → `NODE_VERSION = 22`) |
+| Compatibility flag | **gerekmiyor** (`nodejs_compat`'a ihtiyaç yok) |
+
+### Yerelde doğrulama
+
+```bash
+npm run build          # out/ klasörünü üretir
+npx serve out          # veya: python3 -m http.server -d out 8000
+```
+
+### Başlıklar
+
+`next.config.mjs` içindeki `headers()` statik export'ta çalışmadığı için güvenlik ve cache
+başlıkları **`public/_headers`** dosyasına taşındı. Cloudflare Pages bu dosyayı otomatik okur.
+Başlık değiştirmek istediğinizde `next.config.mjs`'yi değil o dosyayı düzenleyin.
+
+### Yayın sonrası kontrol listesi
+
+- [ ] **www / non-www 301** — `lib/site.ts` içinde kanonik adres `https://www.endustriyelfirinservisi.com`.
+      Cloudflare → Rules → Redirect Rules ile apex (`endustriyelfirinservisi.com`) adresini
+      `www`'ya 301 yönlendirin. Aksi halde aynı içerik iki adreste yayınlanır.
+- [ ] `https://www.endustriyelfirinservisi.com/sitemap.xml` açılıyor mu, `lastmod` tarihleri farklı mı
+- [ ] `/robots.txt` içindeki `Host` ve `Sitemap` satırları doğru domaini gösteriyor mu
+- [ ] Olmayan bir adres (`/deneme`) gerçekten **404** status kodu döndürüyor mu
+- [ ] Bir alt sayfada `curl -I` ile `x-content-type-options` ve `referrer-policy` başlıkları geliyor mu
+- [ ] Search Console'a domain doğrulaması + sitemap gönderimi

@@ -1,0 +1,23 @@
+# Cloudflare Pages baslik kurallari
+# next.config.mjs icindeki headers() statik export'ta calismadigi icin
+# guvenlik ve cache basliklari burada tanimlanir.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+
+# Hash'li dosya adlari — kalici cache
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Icerik dosyalari — kisa cache, arka planda tazele
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
