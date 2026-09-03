@@ -16,8 +16,8 @@
 /** Statik sayfalarin son icerik guncelleme tarihleri */
 export const pageDates = {
   "/": "2026-09-01",
-  "/hizmetler": "2026-09-01",
-  "/markalar": "2026-08-30",
+  "/hizmetler": "2026-09-02",
+  "/markalar": "2026-09-02",
   "/bolgeler": "2026-08-30",
   "/blog": "2026-09-01",
   "/hakkimizda": "2026-08-29",
@@ -34,6 +34,11 @@ export const serviceDates: Record<string, string> = {
   "pizza-firini-servisi": "2026-08-30",
   "konveksiyonel-firin-servisi": "2026-08-30",
   "pizza-firin-tasi-degisimi": "2026-08-30",
+  "kombi-firin-servisi": "2026-09-02",
+  "konveyorlu-firin-servisi": "2026-09-02",
+  "donerli-firin-servisi": "2026-09-02",
+  "matador-firin-servisi": "2026-09-02",
+  "pide-lahmacun-firin-servisi": "2026-09-02",
 };
 
 /**
@@ -42,7 +47,11 @@ export const serviceDates: Record<string, string> = {
  * guncellerseniz asagidaki map'lere o slug icin satir ekleyin.
  */
 export const brandDatesDefault = "2026-08-30";
-export const brandDates: Record<string, string> = {};
+export const brandDates: Record<string, string> = {
+  "senoven-firin-servisi": "2026-09-02",
+  "sgs-firin-servisi": "2026-09-02",
+  "omake-firin-servisi": "2026-09-02",
+};
 
 export const districtDatesDefault = "2026-08-30";
 export const districtDates: Record<string, string> = {};

@@ -185,6 +185,62 @@ export function IconTools(p: IconProps) {
   );
 }
 
+export function IconSteam(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <path d="M8 3.2c0 1.4 1.4 1.9 1.4 3.3S8 9.4 8 10.8" />
+      <path d="M12 2.5c0 1.6 1.5 2.1 1.5 3.7S12 9.6 12 11.2" />
+      <path d="M16 3.2c0 1.4 1.4 1.9 1.4 3.3s-1.4 1.9-1.4 3.3" />
+      <rect x="3" y="13" width="18" height="8.5" rx="2" />
+      <path d="M7 17.2h6M17 17.2h.01" />
+    </svg>
+  );
+}
+
+export function IconConveyor(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <rect x="2" y="7" width="20" height="7.5" rx="1.6" />
+      <path d="M2 11h20" />
+      <circle cx="6" cy="19" r="2.1" />
+      <circle cx="13" cy="19" r="2.1" />
+      <circle cx="19.4" cy="19" r="1.6" />
+      <path d="M6 21.1h13.4" />
+    </svg>
+  );
+}
+
+export function IconRotary(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <rect x="3" y="2.5" width="18" height="19" rx="2.5" />
+      <circle cx="12" cy="12.5" r="5" />
+      <path d="M12 7.5v1.8M16.5 12.5h-1.8M12 17.5v-1.8M7.5 12.5h1.8" />
+      <path d="M14.6 5.2 16 3.6" />
+    </svg>
+  );
+}
+
+export function IconDeck(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <rect x="2.5" y="3" width="19" height="5.5" rx="1.4" />
+      <rect x="2.5" y="10" width="19" height="5.5" rx="1.4" />
+      <rect x="2.5" y="17" width="19" height="4" rx="1.4" />
+      <path d="M7 5.7h5M7 12.7h5M7 19h5" />
+    </svg>
+  );
+}
+
+export function IconFlame(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <path d="M12 2.5c.6 2.7 2.4 3.6 3.9 5.4A6.9 6.9 0 0 1 17.6 13a5.6 5.6 0 0 1-11.2 0c0-1.9.8-3.4 2-4.7.3 1 .9 1.7 1.8 2 .1-3 .9-5.3 1.8-7.8Z" />
+      <path d="M12 18.6a2.5 2.5 0 0 1-1.5-4.4c.7 0 1.3-.5 1.5-1.4.9.7 1.9 1.9 1.9 3.2a2.4 2.4 0 0 1-1.9 2.6Z" />
+    </svg>
+  );
+}
+
 const registry = {
   oven: IconOven,
   kitchen: IconKitchen,
@@ -192,6 +248,11 @@ const registry = {
   pizza: IconPizza,
   fan: IconFan,
   stone: IconStone,
+  steam: IconSteam,
+  conveyor: IconConveyor,
+  rotary: IconRotary,
+  deck: IconDeck,
+  flame: IconFlame,
   clock: IconClock,
   shield: IconShield,
   part: IconPart,

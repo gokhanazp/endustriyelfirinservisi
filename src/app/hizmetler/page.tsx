@@ -85,8 +85,8 @@ export default function ServicesIndex() {
       <section className="container-x py-14 lg:py-16">
         <SectionHead
           eyebrow="Servis başlıkları"
-          title="Altı ayrı uzmanlık alanı"
-          description="Her başlık kendi arıza profili, ölçüm yöntemi ve yedek parça setiyle çalışır. Detay sayfalarında o hizmete özel belirtiler, kapsam ve sık sorulan sorular yer alır."
+          title="Cihaz tipine göre uzmanlık alanları"
+          description="Her başlık kendi arıza profili, ölçüm yöntemi ve yedek parça setiyle çalışır. Detay sayfalarında o cihaz tipine özel belirtiler, servis kapsamı ve sık sorulan sorular yer alır."
         />
         <div className="mt-9 grid gap-6 lg:grid-cols-2">
           {services.map((s) => (

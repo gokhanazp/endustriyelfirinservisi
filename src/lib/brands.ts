@@ -928,6 +928,180 @@ export const brands: Brand[] = [
     ],
     faq: commonBrandFaq("Ndustrio"),
   },
+  {
+    slug: "senoven-firin-servisi",
+    name: "Senoven",
+    aliases: ["Şengün Makine", "Sengun Makine", "Senoven Şengün", "Şenoven"],
+    origin: "Türkiye",
+    tagline:
+      "Şengün Makine üretimi katlı, dönerli ve konveyörlü unlu mamul fırınlarında ağır hizmet tipi servis.",
+    repairNote:
+      "Senoven fırın tamiri, cihazların ekmek ve unlu mamul üretimine yönelik ağır çalışma koşullarına göre kurgulanır: önce mekanik aktarma (redüktör, zincir, yatak) ve buhar bloğu değerlendirilir, ardından elektriksel grup ölçülür. Bu sıralama, üretim fırınlarında arızaların çoğunun mekanik yorulmadan doğması nedeniyle en hızlı sonucu verir.",
+    priceNote:
+      "Senoven fırın tamiri fiyatı; arızanın mekanik aktarma, buhar grubu veya yanma tarafında olmasına göre belirlenir. Zincir gerginlik ayarı ile redüktör değişimi arasında büyük fark vardır; kesin tutar yerinde ölçüm sonrası bildirilir.",
+    intro: [
+      "Senoven, Şengün Makine tarafından üretilen ve ekmek, pide, poğaça ile pastane üretiminde yaygın kullanılan endüstriyel fırın ailesidir. Katlı taş tabanlı modeller, dönerli (rotary) fırınlar ve konveyörlü hatlar aynı çatı altında toplanır. Senoven fırın servisi ve tamiri işinde belirleyici olan, bu cihazların günde 12-18 saat kesintisiz çalışan üretim ekipmanları olmasıdır.",
+      "Servis ekibimiz bu fırınlarda önce mekanik tarafı ölçer: dönerli modellerde araba tahrik motoru, redüktör, kayış ve tabla yatağı; konveyörlü modellerde bant hızı, zincir gerginliği ve rulman boşluğu. Ardından buhar bloğu ve nozullar değerlendirilir, son olarak rezistans grupları, kontaktörler ve prob değerleri okunur.",
+      "Bu fırınlarda en sık gözden kaçan kalem gövde izolasyonu ve kapı fitilidir. Yıllar içinde çöken izolasyon ve sertleşen fitil, arıza olarak görünmediği için ihmal edilir; oysa ısınma süresini uzatarak ve yakıt tüketimini artırarak sessiz bir maliyet üretir. Periyodik bakımlarımızda bu iki kalem termal kamerayla ayrıca kontrol edilir.",
+    ],
+    productLines: [
+      "Katlı taş tabanlı ekmek fırınları",
+      "Dönerli (rotary) fırınlar",
+      "Konveyörlü bantlı fırınlar",
+      "Pide ve lahmacun fırınları",
+      "Fermantasyon (mayalanma) dolapları",
+      "Hamur hazırlık ve kesme makineleri",
+    ],
+    commonFaults: [
+      {
+        title: "Araba dönmüyor veya zorlanıyor",
+        text: "Tahrik motoru, redüktör, kayış-zincir kopması ve tabla yatağı sıkışması dönerli modellerde en sık görülen arızadır.",
+      },
+      {
+        title: "Buhar zayıf, kabuk mat çıkıyor",
+        text: "Kireçlenmiş buhar bloğu ve tıkalı nozullar buhar şokunu ortadan kaldırır; kabuk parlaklığı kaybolur.",
+      },
+      {
+        title: "Katlar arasında pişirme farkı",
+        text: "Katlı modellerde tek bir rezistans grubunun kaybı veya kat kontaktörü arızası, cihaz çalışmaya devam ettiği için geç fark edilir.",
+      },
+      {
+        title: "Isınma süresi uzadı, tüketim arttı",
+        text: "Çökmüş gövde izolasyonu, sertleşmiş kapı fitili ve ayarı bozulmuş brülör hava-yakıt oranı birlikte değerlendirilir.",
+      },
+    ],
+    parts: [
+      "Araba tahrik motoru ve redüktör",
+      "Zincir, kayış, dişli ve rulman seti",
+      "Buhar bloğu kütleleri ve nozullar",
+      "Üst / alt rezistans grupları ve kat kontaktörü",
+      "Kapı fitili, menteşe ve kapı camı",
+      "Sıcaklık probu, emniyet termostatı ve kontrol kartı",
+    ],
+    faq: [
+      {
+        q: "Senoven ile Şengün Makine aynı firma mı?",
+        a: "Senoven, Şengün Makine üretimi fırınlar için kullanılan marka adıdır; sahada iki isim de aynı cihazlar için kullanılır. Servis talebinizde hangi ismi kullandığınız fark etmez, cihazın tipini (katlı, dönerli, konveyörlü) ve kapasitesini bildirmeniz yeterlidir.",
+      },
+      ...commonBrandFaq("Senoven"),
+    ],
+  },
+  {
+    slug: "sgs-firin-servisi",
+    name: "SGS",
+    aliases: ["SGS Endüstriyel", "S.G.S", "SGS Mutfak"],
+    origin: "Türkiye",
+    tagline:
+      "Konveksiyonel ve pizza fırınları ile pişirme gruplarında hızlı parça temini ve yerinde servis.",
+    repairNote:
+      "SGS fırın tamiri işlerinin büyük bölümü, sık kullanılan standart bileşenler üzerinde toplanır: rezistans, kontaktör, prob, fan motoru ve termostat. Bu parçaları araç stoğunda tuttuğumuz için müdahalelerin çoğu tek ziyarette tamamlanır ve cihaz aynı gün üretime döner.",
+    priceNote:
+      "SGS fırın tamiri fiyatı; değişecek parçaya ve arızanın elektriksel mi mekanik mi olduğuna göre belirlenir. Standart parçalar stokta olduğu için işçilik dışında bekleme maliyeti oluşmaz; kesin tutar yerinde teşhis sonrası bildirilir.",
+    intro: [
+      "SGS, endüstriyel mutfaklarda konveksiyonel fırınlar, pizza ve pide fırınları ile pişirme gruplarıyla yer alan Türk üretici markalarındandır. Restoran, kafe ve otel mutfaklarında yaygın kullanılır. SGS fırın servisi ve tamiri işinde avantaj, cihazların büyük ölçüde standart endüstriyel bileşenler kullanmasıdır; bu da parça teminini hızlandırır.",
+      "Ekiplerimiz bu cihazlarda en sık rezistans kaybı, fan motoru ve rulman arızası, termostat sapması ve kapı contası kaynaklı ısı kaçağıyla karşılaşır. Teşhis her zaman ölçümle yapılır: rezistans direnci, gövdeye karşı izolasyon, faz dengesi ve prob direnç-sıcaklık eğrisi tek tek okunur.",
+      "Onarım sonrası cihaz boş ve dolu çevrimde test edilir; set sıcaklığına ulaşma süresi ile raf seviyeleri arasındaki sıcaklık farkı ölçülerek işletmeye teslim edilir. Değişen parçalar ve ölçüm değerleri servis formuna yazılır, böylece cihazın arıza geçmişi zamanla oluşur.",
+    ],
+    productLines: [
+      "Konveksiyonel fırınlar",
+      "Pizza ve pide fırınları",
+      "Kuzine ocak ve pişirme grupları",
+      "Fritöz, ızgara ve pleyt üniteleri",
+      "Benmari ve servis ekipmanları",
+      "Paslanmaz hazırlık tezgâhları",
+    ],
+    commonFaults: [
+      {
+        title: "Fırın ısınmıyor veya geç ısınıyor",
+        text: "Yanmış rezistans, yapışmış kontaktör ve kopmuş faz en sık görülen üç nedendir; ölçümle hızlıca ayrıştırılır.",
+      },
+      {
+        title: "Fan ses yapıyor, titreşim var",
+        text: "Yıpranmış fan rulmanı, dengesi bozulmuş kanat ve zayıflamış kondansatör gürültü ile hava debisi kaybı üretir.",
+      },
+      {
+        title: "Sıcaklık göstergeden farklı",
+        text: "Kalibrasyonu kaymış prob veya termostat, ekranda yazan değer ile gerçek fırın sıcaklığını ayrıştırır.",
+      },
+      {
+        title: "Kapıdan ısı kaçıyor",
+        text: "Sertleşmiş silikon conta ve ayarı kaçmış menteşe hem pişirme kalitesini hem de enerji tüketimini olumsuz etkiler.",
+      },
+    ],
+    parts: [
+      "Rezistans (üst / alt grup)",
+      "Güç kontaktörü ve termik röle",
+      "Fan motoru, kondansatör ve fan kanadı",
+      "Sıcaklık probu ve kapiler termostat",
+      "Kapı contası, menteşe ve kapı camı",
+      "Kontrol kartı, zaman rölesi ve tuş takımı",
+    ],
+    faq: [
+      {
+        q: "SGS fırınlarda parça temini ne kadar sürüyor?",
+        a: "Rezistans, kontaktör, prob, termostat ve fan motoru gibi sık değişen parçaları araç ve depo stoğumuzda tutuyoruz; bu kalemlerde müdahale genellikle tek ziyarette tamamlanır. Gövdeye özel parçalarda tedarik süresi ortalama 1-3 iş günüdür ve bu sürede cihazı kısıtlı da olsa çalışır durumda tutacak çözümler uygularız.",
+      },
+      ...commonBrandFaq("SGS"),
+    ],
+  },
+  {
+    slug: "omake-firin-servisi",
+    name: "Omake",
+    aliases: ["Omak", "Omake Endüstriyel", "Omake Professional"],
+    origin: "Türkiye",
+    tagline:
+      "Konveksiyonel fırın, pişirme ve yıkama gruplarında elektronik ve mekanik bütünleşik servis.",
+    repairNote:
+      "Omake fırın tamiri, cihazların elektronik kontrollü modellerinde hata kodu okumayla, mekanik modellerinde doğrudan elektriksel ölçümle başlar. Her iki yolda da amaç aynıdır: parça değiştirmeden önce arızalı halkayı ölçümle kanıtlamak. Bu yaklaşım gereksiz parça maliyetini ortadan kaldırır.",
+    priceNote:
+      "Omake fırın tamiri fiyatı; arızanın kontrol kartında mı, ısıtma grubunda mı yoksa mekanik tarafta mı olduğuna göre belirlenir. Kart onarımı çoğu vakada komple kart değişiminden ekonomiktir ve iki seçenek de fiyatıyla birlikte sunulur.",
+    intro: [
+      "Omake, endüstriyel mutfak ekipmanları üreten ve konveksiyonel fırınlar, pişirme grupları ile bulaşıkhane ekipmanlarında geniş bir ürün yelpazesi sunan markalardandır. Otel, restoran ve toplu yemek mutfaklarında yaygın kullanılır. Omake fırın servisi ve tamiri çalışmalarımız, cihazın elektronik kontrollü mü yoksa klasik termostatlı model mi olduğunun belirlenmesiyle başlar.",
+      "Elektronik kontrollü modellerde panelde biriken hata kayıtları okunur ve prob-kart-aktüatör zinciri sırayla ölçülür. Klasik modellerde ise doğrudan rezistans direnci, kontaktör teması, termostat kesme noktası ve fan devri ölçülür. İki yolda da arızalı halka parça değişiminden önce ölçümle doğrulanır.",
+      "Bulaşıkhane ve yıkama grubu ekipmanlarında ise arızaların önemli bölümü su kaynaklıdır: kireç, tıkalı püskürtme kolları, arızalı dozaj pompası ve tahliye sorunları. Fırın onarımıyla birlikte mutfağın bu tarafında da hızlı bir kontrol yapıyor, tekrar eden arızaların kök nedenini işletmeye rapor ediyoruz.",
+    ],
+    productLines: [
+      "Konveksiyonel fırınlar",
+      "Buharlı konveksiyon modelleri",
+      "Kuzine ocak ve pişirme grupları",
+      "Fritöz, ızgara ve pleyt üniteleri",
+      "Bulaşık ve bardak yıkama makineleri",
+      "Benmari, teşhir ve servis ekipmanları",
+    ],
+    commonFaults: [
+      {
+        title: "Panelde hata kodu, cihaz kilitleniyor",
+        text: "Prob açık devre, aşırı ısınma koruması ve besleme kartı hataları elektronik kontrollü modelleri devre dışı bırakır.",
+      },
+      {
+        title: "Isıtma yok, panel çalışıyor",
+        text: "Yanmış rezistans, yapışmış veya bobini yanmış kontaktör ve kart röle çıkışı arızası ısıtma devresini keser.",
+      },
+      {
+        title: "Fan devri düşük, pişirme dengesiz",
+        text: "Yıpranmış rulman, zayıflamış kondansatör ve kirlenmiş fan kanadı hava debisini düşürerek tepsi farkı yaratır.",
+      },
+      {
+        title: "Yıkama grubunda su ve kireç sorunları",
+        text: "Tıkalı püskürtme kolları, kireçlenmiş rezistans, arızalı dozaj pompası ve tahliye sorunları yıkama performansını bozar.",
+      },
+    ],
+    parts: [
+      "Rezistans grubu ve güç kontaktörü",
+      "Sıcaklık probu (NTC / PT100) ve termostat",
+      "Fan motoru, kondansatör ve fan kanadı",
+      "Elektronik kontrol kartı ve tuş takımı filmi",
+      "Kapı contası, menteşe ve kilit mekanizması",
+      "Yıkama pompası, dozaj hortumu ve püskürtme kolu",
+    ],
+    faq: [
+      {
+        q: "Omake fırınımın modeli elektronik mi klasik mi, nasıl anlarım?",
+        a: "Panelde dijital ekran, program hafızası veya dokunmatik tuşlar varsa cihaz elektronik kontrollüdür. Yalnızca çevirmeli termostat düğmesi ve mekanik zamanlayıcı varsa klasik modeldir. Telefonda paneli tarif etmeniz yeterli; teknisyen doğru ölçüm setiyle ve olası parçalarla yola çıkar.",
+      },
+      ...commonBrandFaq("Omake"),
+    ],
+  },
 ];
 
 export const brandSlugs = brands.map((b) => b.slug);
@@ -945,26 +1119,31 @@ export function getBrand(slug: string): Brand | undefined {
 export const brandServiceMap: Record<string, string[]> = {
   "electrolux-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
     "endustriyel-mutfak-servisi",
     "endustriyel-firin-servisi",
   ],
   "ayfa-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "pide-lahmacun-firin-servisi",
     "pizza-firini-servisi",
     "endustriyel-mutfak-servisi",
   ],
   "ucler-firin-servisi": [
+    "matador-firin-servisi",
+    "pide-lahmacun-firin-servisi",
+    "donerli-firin-servisi",
     "pizza-firini-servisi",
-    "sanayi-tipi-firin-servisi",
-    "pizza-firin-tasi-degisimi",
   ],
   "pimak-firin-servisi": [
+    "konveyorlu-firin-servisi",
+    "donerli-firin-servisi",
     "pizza-firini-servisi",
     "sanayi-tipi-firin-servisi",
-    "konveksiyonel-firin-servisi",
   ],
   "inoksan-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
     "endustriyel-mutfak-servisi",
     "endustriyel-firin-servisi",
   ],
@@ -975,14 +1154,17 @@ export const brandServiceMap: Record<string, string[]> = {
   "empero-firin-servisi": [
     "konveksiyonel-firin-servisi",
     "pizza-firini-servisi",
+    "pide-lahmacun-firin-servisi",
     "endustriyel-mutfak-servisi",
   ],
   "unox-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
     "endustriyel-firin-servisi",
   ],
   "oztiryakiler-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
     "endustriyel-mutfak-servisi",
     "endustriyel-firin-servisi",
   ],
@@ -991,19 +1173,22 @@ export const brandServiceMap: Record<string, string[]> = {
     "endustriyel-mutfak-servisi",
   ],
   "kayalar-firin-servisi": [
+    "matador-firin-servisi",
+    "pide-lahmacun-firin-servisi",
+    "donerli-firin-servisi",
     "sanayi-tipi-firin-servisi",
-    "pizza-firini-servisi",
-    "pizza-firin-tasi-degisimi",
   ],
   "maksan-firin-servisi": [
+    "donerli-firin-servisi",
+    "konveyorlu-firin-servisi",
     "sanayi-tipi-firin-servisi",
-    "endustriyel-firin-servisi",
   ],
   "greenoks-firin-servisi": [
     "konveksiyonel-firin-servisi",
     "endustriyel-mutfak-servisi",
   ],
   "alveo-firin-servisi": [
+    "matador-firin-servisi",
     "konveksiyonel-firin-servisi",
     "sanayi-tipi-firin-servisi",
   ],
@@ -1014,11 +1199,29 @@ export const brandServiceMap: Record<string, string[]> = {
   "vital-firin-servisi": [
     "konveksiyonel-firin-servisi",
     "pizza-firini-servisi",
+    "pide-lahmacun-firin-servisi",
     "endustriyel-mutfak-servisi",
   ],
   "ndustrio-firin-servisi": [
     "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
     "endustriyel-firin-servisi",
+  ],
+  "senoven-firin-servisi": [
+    "donerli-firin-servisi",
+    "matador-firin-servisi",
+    "konveyorlu-firin-servisi",
+    "sanayi-tipi-firin-servisi",
+  ],
+  "sgs-firin-servisi": [
+    "konveksiyonel-firin-servisi",
+    "pide-lahmacun-firin-servisi",
+    "endustriyel-mutfak-servisi",
+  ],
+  "omake-firin-servisi": [
+    "konveksiyonel-firin-servisi",
+    "kombi-firin-servisi",
+    "endustriyel-mutfak-servisi",
   ],
 };
 

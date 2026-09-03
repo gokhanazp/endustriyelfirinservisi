@@ -182,3 +182,77 @@ Başlık değiştirmek istediğinizde `next.config.mjs`'yi değil o dosyayı dü
 - [ ] Olmayan bir adres (`/deneme`) gerçekten **404** status kodu döndürüyor mu
 - [ ] Bir alt sayfada `curl -I` ile `x-content-type-options` ve `referrer-policy` başlıkları geliyor mu
 - [ ] Search Console'a domain doğrulaması + sitemap gönderimi
+
+---
+
+## 6. İçerik genişletmesi — 5 hizmet, 3 marka (2 Eylül 2026)
+
+### 6.1 Eklenen hizmet sayfaları
+
+| Sayfa | Birincil kelime | İkon |
+|---|---|---|
+| `/hizmetler/kombi-firin-servisi` | kombi fırın servisi | `steam` |
+| `/hizmetler/konveyorlu-firin-servisi` | konveyörlü fırın servisi | `conveyor` |
+| `/hizmetler/donerli-firin-servisi` | dönerli fırın servisi | `rotary` |
+| `/hizmetler/matador-firin-servisi` | matador fırın servisi | `deck` |
+| `/hizmetler/pide-lahmacun-firin-servisi` | pide fırını servisi | `flame` |
+
+Her biri mevcut sayfalarla aynı derinlikte: 3 paragraf giriş, 6 arıza belirtisi, 9 maddelik
+servis kapsamı, 7 cihaz tipi, 9 yedek parça, 6 SSS ve fiyatlandırma notu. Yayınlanan HTML'de
+sayfa başına ~1.400 kelime, tek H1, Service + FAQPage + BreadcrumbList şeması.
+
+### 6.2 Keyword cannibalization düzeltmesi
+
+Yeni sayfaların üçü mevcut sayfaların hedeflediği kelimelerle çakışıyordu. Planın 3.3 kuralı
+gereği (*"aynı kelimeyi iki sayfada H1 yapmayın"*) mevcut sayfalar yeniden konumlandırıldı.
+
+**Konveksiyonel Fırın Servisi** — artık yalnızca fanlı modelleri hedefliyor:
+
+- Anahtar kelime listesinden "kombi fırın servisi" ve "buharlı fırın tamiri" çıkarıldı;
+  yerine "konveksiyonel fırın fan arızası" ve "konveksiyonel fırın rezistans değişimi" eklendi
+- Başlıktaki "Buhar" kaldırıldı; açıklama ve özet hava akışı odağına çekildi
+- Tamamen kombi anlatan giriş paragrafı, fan ve hava akışı teşhisini anlatan yeni bir
+  paragrafla değiştirildi
+- Kapanış paragrafına Kombi Fırın Servisi sayfasına yönlendirme eklendi
+
+**Sanayi Tipi Fırın Servisi** — üst başlık (hub) hâline getirildi:
+
+- Açıklama ve özet, "katlı, döner, tünel, konveyör" sayımı yerine pano, güç dağıtımı,
+  izolasyon ve mekanik aktarma odağına çekildi
+- Sayfadan Dönerli, Konveyörlü ve Matador sayfalarına açık yönlendirme verildi
+
+### 6.3 Yeni related alanı
+
+Service tipine `related?: { slug, note }[]` alanı eklendi. Hizmet detay sayfasında girişin
+hemen altında **"Cihazınız daha özel bir tipteyse"** bloğu olarak render ediliyor. 8 sayfada
+aktif; hem kullanıcıyı doğru sayfaya taşıyor hem de üst sayfanın alt sayfayla aynı kelimeye
+girmesini engelliyor.
+
+### 6.4 Eklenen marka sayfaları
+
+| Sayfa | Eşleştirildiği hizmetler |
+|---|---|
+| `/markalar/senoven-firin-servisi` (Şengün Makine) | Dönerli, Matador, Konveyörlü, Sanayi Tipi |
+| `/markalar/sgs-firin-servisi` | Konveksiyonel, Pide & Lahmacun, Endüstriyel Mutfak |
+| `/markalar/omake-firin-servisi` | Konveksiyonel, Kombi, Endüstriyel Mutfak |
+
+`brandServiceMap` 20/20 markayı kapsayacak şekilde yenilendi; mevcut 17 marka da yeni
+hizmetlere eşleştirildi (ör. Electrolux/Unox/Ndustrio → Kombi, Pimak/Maksan → Konveyörlü ve
+Dönerli, Üçler/Kayalar → Matador ve Pide & Lahmacun).
+
+### 6.5 Diğer güncellemeler
+
+- `Icons.tsx`: 5 yeni ikon (steam, conveyor, rotary, deck, flame)
+- `/hizmetler` seçim tablosu 6 → **11 satır**; sayfa ~2.600 kelimeye çıktı
+- `content-dates.ts`: yeni hizmet ve markalar için 2026-09-02 tarihleri
+
+### 6.6 Doğrulama
+
+Temiz bir Linux ortamında `npm ci && next build` çalıştırıldı:
+
+- Build başarılı, **91 sayfa** üretildi
+- `sitemap.xml` → **85 URL** (77 + 5 hizmet + 3 marka)
+- `lastmod` → 10 farklı gerçek tarih
+- 5 yeni sayfanın her birinde tek H1, 6 SSS, doğru canonical
+- 31 sayfa şablonunun tamamında başlık en fazla 62, açıklama 115-160 karakter
+- Tüm related ve brandServiceMap slug'ları geçerli hizmetlere çözümleniyor

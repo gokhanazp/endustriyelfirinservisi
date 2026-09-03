@@ -17,6 +17,12 @@ export type Service = {
   parts: string[];
   faq: FaqItem[];
   priceNote: string;
+  /**
+   * Ayni konu ailesindeki daha spesifik sayfalara yonlendirme.
+   * Ust baslik (hub) sayfalarinin alt sayfalarla ayni anahtar
+   * kelimeye girmesini onler; kullaniciyi dogru sayfaya tasir.
+   */
+  related?: { slug: string; note: string }[];
 };
 
 export const services: Service[] = [
@@ -236,15 +242,16 @@ export const services: Service[] = [
     icon: "factory",
     metaTitle: "Sanayi Tipi Fırın Servisi ve Tamiri | Yerinde Teknik Servis",
     metaDescription:
-      "Sanayi tipi fırın servisi ve tamiri: katlı, döner, tünel ve konveyör fırınlarda üretim hatlarına yerinde arıza müdahalesi ve periyodik bakım.",
+      "Sanayi tipi fırın servisi ve tamiri: yüksek kapasiteli üretim fırınlarında pano, güç, izolasyon ve mekanik arızalara ağır hizmet tipi yerinde müdahale.",
     excerpt:
-      "Katlı, döner, tünel ve konveyör fırınlarda yüksek kapasiteli üretim hatları için ağır hizmet tipi teknik servis.",
+      "Yüksek kapasiteli üretim fırınlarında pano, güç dağıtımı, izolasyon ve mekanik aktarma arızaları için ağır hizmet tipi teknik servis.",
     keywords: [
       "sanayi tipi fırın servisi",
       "sanayi tipi fırın tamiri",
       "sanayi fırını servisi",
       "endüstriyel üretim fırını servisi",
       "tünel fırın servisi",
+      "üretim fırını periyodik bakım",
     ],
     intro: [
       "Sanayi tipi fırınlar, ticari mutfak fırınlarından hem güç hem de süreklilik açısından ayrılır. 380 V üç fazlı beslemeyle çalışan, 30-60 kW arası güç çeken, günde 16-20 saat kesintisiz üretim yapan bu cihazlarda arıza yalnızca bir cihazı değil, tüm üretim planını durdurur. Sanayi tipi fırın servisi ve tamiri bu nedenle hem hızlı hem de kalıcı çözüm gerektirir.",
@@ -324,6 +331,11 @@ export const services: Service[] = [
     ],
     priceNote:
       "Sanayi tipi fırın tamiri fiyatı; cihaz kapasitesi, arızalı grup ve müdahale süresine göre değişir. Üretim hattı duruşlarında öncelikli acil servis tarifesi uygulanır.",
+    related: [
+      { slug: "donerli-firin-servisi", note: "Tepsi arabası dönen rotary fırınlarda tahrik, redüktör ve buhar bloğu arızaları" },
+      { slug: "konveyorlu-firin-servisi", note: "Bantlı ve tünel tipi fırınlarda bant hızı, redüktör ve zincir arızaları" },
+      { slug: "matador-firin-servisi", note: "Katlı taş tabanlı buharlı ekmek fırınlarında kat bazında arıza ve taban taşı" },
+    ],
   },
   {
     slug: "pizza-firini-servisi",
@@ -420,6 +432,11 @@ export const services: Service[] = [
     ],
     priceNote:
       "Pizza fırını tamiri fiyatı fırın tipine (taş tabanlı, konveyör, odun ateşli) ve arızalı gruba göre değişir. Taş değişimi ile rezistans onarımı çoğunlukla aynı serviste birlikte yapılabilir.",
+    related: [
+      { slug: "pizza-firin-tasi-degisimi", note: "Sorun cihazda değil taştaysa: ölçüye özel kesim, montaj ve kürleme" },
+      { slug: "konveyorlu-firin-servisi", note: "Konveyörlü (bantlı) pizza fırınlarında bant ve tahrik arızaları" },
+      { slug: "pide-lahmacun-firin-servisi", note: "Pide ve lahmacun fırınları için daha yüksek taban ısısına göre servis" },
+    ],
   },
   {
     slug: "konveksiyonel-firin-servisi",
@@ -427,22 +444,22 @@ export const services: Service[] = [
     navName: "Konveksiyonel Fırın Servisi",
     icon: "fan",
     h1: "Konveksiyonel Fırın Servisi ve Tamiri",
-    metaTitle: "Konveksiyonel Fırın Servisi ve Tamiri | Fan, Rezistans, Buhar",
+    metaTitle: "Konveksiyonel Fırın Servisi ve Tamiri | Fan ve Rezistans",
     metaDescription:
-      "Konveksiyonel fırın servisi ve tamiri: fan motoru, rezistans, buhar üretimi, kontrol kartı ve sıcaklık kalibrasyonu sorunlarında yerinde teknik servis.",
+      "Konveksiyonel fırın servisi ve tamiri: fan motoru, rezistans, hava akışı, kontrol kartı ve sıcaklık kalibrasyonu sorunlarında yerinde teknik servis.",
     excerpt:
-      "Konveksiyonel ve kombi (buharlı) fırınlarda fan, rezistans, buhar üretimi ve elektronik kart arızalarına uzman müdahale.",
+      "Konveksiyonel fırınlarda fan motoru, rezistans, hava akışı ve elektronik kart arızalarına hava akışı odaklı uzman müdahale.",
     keywords: [
       "konveksiyonel fırın servisi",
       "konveksiyonel fırın tamiri",
-      "kombi fırın servisi",
-      "buharlı fırın tamiri",
       "konveksiyonel fırın arızası",
+      "konveksiyonel fırın fan arızası",
+      "konveksiyonel fırın rezistans değişimi",
     ],
     intro: [
       "Konveksiyonel fırın, ısıyı fanla zorlamalı biçimde dolaştırarak tüm tepsilerde eşit pişirme sağlar. Bu avantaj aynı zamanda hassasiyet demektir: fan devrinde düşüş, kanat dengesizliği veya hava yönlendirme sacındaki deformasyon, doğrudan pişirme kalitesine yansır. Konveksiyonel fırın servisi ve tamiri işinde teşhis, bu yüzden sıcaklık kadar hava akışı üzerine kuruludur.",
-      "Kombi (buharlı) modellerde işin bir katmanı daha vardır. Buhar üretimi ya boyler ile ya da doğrudan püskürtme yöntemiyle yapılır; her ikisinde de su sertliği, kireç birikimi ve solenoid valf sağlığı belirleyicidir. Su yumuşatma sistemi olmayan işletmelerde buhar arızalarının neredeyse tamamı kireç kaynaklıdır ve tekrar etmemesi için önce su hattı çözülmelidir.",
-      "Servis sonrasında fırın; boş çevrim, dolu tepsi çevrimi ve buhar çevriminde ayrı ayrı test edilir. Sıcaklık homojenliği farklı raf seviyelerinde ölçülür, sapma 5 °C'nin üzerindeyse hava yönlendirme ve prob konumu yeniden ayarlanır.",
+      "Arızanın kaynağı çoğu zaman göründüğü yerde değildir. Tepsiler arasında pişme farkı oluştuğunda ilk akla rezistans gelir; oysa aynı belirtiyi düşmüş fan devri, deforme olmuş fan kanadı, eğrilmiş hava yönlendirme sacı veya kirlenmiş emiş ızgarası da üretir. Bu yüzden teşhiste rezistans direnci kadar fan devri, hava debisi ve raf seviyeleri arasındaki sıcaklık farkı da ölçülür.",
+      "Servis sonrasında fırın boş çevrimde ve dolu tepsiyle ayrı ayrı test edilir. Sıcaklık homojenliği farklı raf seviyelerinde ölçülür, sapma 5 °C'nin üzerindeyse hava yönlendirme ve prob konumu yeniden ayarlanır. Cihazınız buhar da üretiyorsa (kombi model), buhar tarafındaki kireç ve su hattı sorunları ayrı bir uzmanlık alanıdır; onları kombi fırın servisi sayfamızda ayrıntılı anlatıyoruz.",
     ],
     symptoms: [
       {
@@ -518,6 +535,574 @@ export const services: Service[] = [
     ],
     priceNote:
       "Konveksiyonel fırın tamiri fiyatı; fan, rezistans, buhar grubu veya elektronik kart gibi arızalı gruba göre değişir. Kireç kaynaklı arızalarda su yumuşatma çözümü ayrıca fiyatlandırılır.",
+    related: [
+      { slug: "kombi-firin-servisi", note: "Cihazınız buhar da üretiyorsa: boyler, kireç, solenoid valf ve yıkama arızaları" },
+    ],
+  },
+  {
+    slug: "kombi-firin-servisi",
+    name: "Kombi Fırın Servisi ve Tamiri",
+    navName: "Kombi Fırın Servisi",
+    h1: "Kombi (Buharlı) Fırın Servisi ve Tamiri",
+    icon: "steam",
+    metaTitle: "Kombi Fırın Servisi ve Tamiri | Buhar, Kireç, Kart",
+    metaDescription:
+      "Kombi fırın servisi ve tamiri: buhar gelmemesi, kireç tıkanması, boyler, solenoid valf ve kontrol kartı arızalarında yerinde teknik servis ve kireç çözme.",
+    excerpt:
+      "Buharlı (kombi) fırınlarda buhar üretimi, kireç, boyler, su hattı ve elektronik kart arızalarına yerinde müdahale ve kalıcı su çözümü.",
+    keywords: [
+      "kombi fırın servisi",
+      "kombi fırın tamiri",
+      "buharlı fırın servisi",
+      "combi steamer servisi",
+      "kombi fırın kireç çözme",
+      "kombi fırın buhar gelmiyor",
+    ],
+    intro: [
+      "Kombi fırın, konveksiyon ve buharı tek gövdede birleştiren, nem oranını yüzde bir hassasiyetle yönetebilen en yetenekli pişirme ekipmanıdır. Bu yetenek aynı zamanda en kırılgan noktasıdır: cihazın yarısı fırın, yarısı bir su tesisatıdır. Kombi fırın servisi ve tamiri işinde arızaların büyük bölümü rezistansta veya fanda değil, su tarafında başlar.",
+      "Sahadan gelen 'buhar gelmiyor', 'yıkama programı tamamlanmıyor', 'ekranda su hatası var' çağrılarının çoğunda bozulmuş bir parça bulmayız; kireç buluruz. Boyler taşına oturmuş kireç ısı transferini keser, nozulları tıkar, seviye elektrotunu yanlış okutur ve sonunda kartı hataya düşürür. Bu yüzden her müdahale su sertliği ölçümüyle başlar: sertlik bilinmeden yapılan kireç çözme, aynı arızayı birkaç ay sonra geri getirir.",
+      "Onarım sonrasında cihaz üç ayrı çevrimde test edilir: kuru konveksiyon, tam buhar ve kombine mod. Set nemine ulaşma süresi, buhar sürekliliği, çekirdek sıcaklık probu tepkisi ve yıkama programının tam tamamlanması ölçülür. Su yumuşatma sistemi yoksa veya reçinesi doymuşsa, bunu raporda yazılı olarak bildiririz — çözülmediği sürece arıza tekrar eder.",
+    ],
+    symptoms: [
+      {
+        title: "Buhar hiç gelmiyor veya çok az geliyor",
+        text: "Kireçlenmiş boyler, tıkalı buhar nozulları, arızalı solenoid valf, düşük şebeke su basıncı veya kapalı kalmış küresel vana en sık nedenlerdir.",
+      },
+      {
+        title: "Ekranda su / seviye hatası çıkıyor",
+        text: "Seviye elektrotunun üzerini kaplayan kireç tabakası suyu görmez hale getirir; cihaz hazne dolu olduğu halde su yok hatası verir.",
+      },
+      {
+        title: "Yıkama programı tamamlanmıyor",
+        text: "Yıkama pompası, deterjan dozaj hortumu, drenaj tıkanıklığı ve tahliye valfi arızaları programın ortasında durmasına yol açar.",
+      },
+      {
+        title: "Pişirme uzuyor, nem tutmuyor",
+        text: "Sertleşmiş kapı contası ve ayarı kaçmış menteşe buharın kaçmasına neden olur; cihaz kaybettiği nemi telafi etmek için sürekli üretim yapar.",
+      },
+      {
+        title: "Cihazın altında su birikiyor",
+        text: "Drenaj hattı tıkanıklığı, çatlamış tahliye hortumu, gevşemiş kelepçe veya buhar jeneratörü contası sızıntısı araştırılır.",
+      },
+      {
+        title: "Çekirdek sıcaklık probu yanlış okuyor",
+        text: "Uç kısmı yıpranmış veya kablosu kopmaya başlamış çekirdek probu, ürün piştiği halde cihazın programı sonlandırmamasına neden olur.",
+      },
+    ],
+    scope: [
+      "Su sertliği ölçümü ve kireç risk raporu",
+      "Boyler ve buhar bloğu kireç çözme, nozul açma",
+      "Seviye elektrotu temizliği ve kalibrasyonu",
+      "Solenoid valf, su pompası ve basınç düşürücü değişimi",
+      "Yıkama pompası, dozaj hattı ve drenaj açma",
+      "Kapı contası, menteşe ve kilit ayarı",
+      "Çekirdek probu ve hazne probu değişimi",
+      "Elektronik kontrol kartı onarımı ve yazılım güncellemesi",
+      "Su yumuşatma sistemi kurulumu ve reçine yenileme",
+    ],
+    equipment: [
+      "Boyler (jeneratör) tipli kombi fırınlar",
+      "Direkt püskürtmeli (injection) kombi fırınlar",
+      "Otomatik yıkama sistemli modeller",
+      "Tezgâh üstü kompakt kombi fırınlar",
+      "10, 20 ve 40 GN kapasiteli dikey modeller",
+      "Elektrikli ve gazlı kombi fırınlar",
+      "Dokunmatik panelli akıllı pişirme programlı modeller",
+    ],
+    parts: [
+      "Buhar boyleri ve rezistans grubu",
+      "Solenoid (su giriş) valfi",
+      "Su pompası ve basınç şalteri",
+      "Seviye elektrotu ve emniyet termostatı",
+      "Buhar nozulu ve püskürtme borusu",
+      "Yıkama pompası ve deterjan dozaj hortumu",
+      "Çekirdek sıcaklık probu ve hazne probu",
+      "Kapı contası, menteşe ve kilit mekanizması",
+      "Elektronik kontrol kartı ve dokunmatik panel",
+    ],
+    faq: [
+      {
+        q: "Kombi fırında buhar gelmiyorsa ilk ne kontrol edilmeli?",
+        a: "Sırayla: cihaza giden su vanasının açık olduğu, şebeke basıncının yeterli olduğu ve giriş filtresinin tıkalı olmadığı kontrol edilir. Bu üçü sağlamsa sorun büyük olasılıkla boyler kirecinde, buhar nozullarında veya solenoid valftedir ve yerinde müdahale gerekir. Filtreyi kontrol etmek dışında cihazın kapağını sökmeyin; kombi fırınlarda basınçlı buhar ve 380 V birlikte bulunur.",
+      },
+      {
+        q: "Kireç çözme ne sıklıkta yapılmalı?",
+        a: "Sıklığı su sertliği ve günlük buhar kullanımı belirler. Sert su bölgesinde yoğun buhar kullanan bir işletmede 3 ayda bir, yumuşatma sistemi olan ve orta yoğunlukta çalışan bir mutfakta 9-12 ayda bir yeterlidir. Doğru periyodu ilk ziyarette su sertliğini ölçerek belirler ve yazılı olarak bildiririz.",
+      },
+      {
+        q: "Su yumuşatma sistemi kurmak zorunlu mu?",
+        a: "Zorunlu değil ama sert su bölgesinde çalışan bir kombi fırında yatırımın kendini genellikle iki yıl içinde amorti ettiğini görüyoruz. Yumuşatmasız cihazda tekrarlayan kireç çözme bedeli, boyler ve rezistans ömrünün kısalması ve üretim duruşları toplamda daha pahalıya gelir. Cihaz üreticilerinin bir bölümü de garantiyi su kalitesi şartına bağlar.",
+      },
+      {
+        q: "Kombi fırın ile konveksiyonel fırın arasındaki fark nedir?",
+        a: "Konveksiyonel fırın yalnızca fanla dolaştırılan kuru sıcak hava kullanır. Kombi fırın buna kontrollü buhar ekler ve nem oranını programlayabilir; et, sebze, ekmek ve sous-vide gibi farklı ürünleri aynı cihazda pişirebilir. Cihazınızda buhar fonksiyonu yoksa konveksiyonel fırın servisi sayfamız doğru başlıktır.",
+      },
+      {
+        q: "Yıkama programı yarıda kalıyor, cihaz bozuk mu?",
+        a: "Çoğu zaman hayır. En sık neden drenaj tıkanıklığı veya biten deterjan/durulama kimyasalıdır. Kimyasal doluysa ve tahliye açıksa yıkama pompası, dozaj hortumu ve tahliye valfi kontrol edilir. Yıkama programı tamamlanmadan cihazı pişirmede kullanmak, hazne içinde kalan kimyasal nedeniyle sakıncalıdır.",
+      },
+      {
+        q: "Kireç çözme sırasında cihaz ne kadar süre kapalı kalır?",
+        a: "Standart bir kireç çözme, çözücünün dolaşımı ve bekleme süresiyle birlikte 2-4 saat sürer. Ağır kireçlenmiş cihazlarda mekanik nozul açma ve ikinci tur uygulama gerekebilir; bu durumda süre 6 saati bulabilir. İşletmeyi durdurmamak için uygulamayı servis dışı saatlere veya kapalı güne planlıyoruz.",
+      },
+    ],
+    priceNote:
+      "Kombi fırın tamiri fiyatı; arızanın su tarafında mı elektronik tarafta mı olduğuna, kireçlenme seviyesine ve değişecek parçaya göre belirlenir. Kireç çözme ile kart onarımı çok farklı kalemlerdir; kesin tutar yerinde teşhis sonrası netleşir.",
+    related: [
+      { slug: "konveksiyonel-firin-servisi", note: "Buhar fonksiyonu olmayan, yalnızca fanlı modeller için" },
+    ],
+  },
+  {
+    slug: "konveyorlu-firin-servisi",
+    name: "Konveyörlü (Bantlı) Fırın Servisi ve Tamiri",
+    navName: "Konveyörlü Fırın Servisi",
+    h1: "Konveyörlü (Bantlı) Fırın Servisi ve Tamiri",
+    icon: "conveyor",
+    metaTitle: "Konveyörlü Fırın Servisi ve Tamiri | Bant, Redüktör",
+    metaDescription:
+      "Konveyörlü bantlı fırın servisi ve tamiri: bant durması, redüktör, zincir, hız kontrol ve ısı dengesizliği arızalarında yerinde teknik servis ve bakım.",
+    excerpt:
+      "Bantlı pizza, ekmek ve unlu mamul fırınlarında bant tahriki, redüktör, hız kontrolü ve bölgesel ısı dengesizliği sorunlarına uzman müdahale.",
+    keywords: [
+      "konveyörlü fırın servisi",
+      "bantlı fırın tamiri",
+      "konveyör fırın servisi",
+      "bantlı pizza fırını tamiri",
+      "konveyörlü fırın bant değişimi",
+    ],
+    intro: [
+      "Konveyörlü fırın, ürünü sabit hızda ısı bölgelerinin içinden geçirerek pişiren bir üretim hattıdır. Operatör bağımlılığını ortadan kaldırdığı için zincir işletmelerde ve yüksek hacimli üretimde tercih edilir. Buna karşılık mekanik bir sistemdir: bant, redüktör, zincir, rulman ve hız kontrol ünitesi birlikte çalışır ve bunlardan biri bozulduğunda cihaz pişirmeyi tamamen durdurur.",
+      "Konveyörlü fırın servisi ve tamiri işinde teşhis iki ayrı eksende ilerler. Birincisi tahrik tarafıdır: bandın hızı ölçülür, gerçek geçiş süresi panelde yazan değerle karşılaştırılır, redüktör yağ seviyesi ve sesi, zincir gerginliği ve rulman boşluğu kontrol edilir. İkincisi ısı tarafıdır: bant boyunca farklı noktalardan sıcaklık ölçülerek üfleme kanallarının dengeli çalışıp çalışmadığı çıkarılır.",
+      "Bu iki eksen birbirini gizler. Yavaşlamış bir bant, ürünün fazla pişmesine yol açar ve işletme bunu 'fırın çok ısıtıyor' diye bildirir; sıcaklık düşürülür, bu kez taban çiğ kalır. Bu nedenle her serviste önce bant hızı kronometreyle doğrulanır, sonra sıcaklık ayarına dokunulur.",
+    ],
+    symptoms: [
+      {
+        title: "Bant duruyor veya kesik kesik ilerliyor",
+        text: "Redüktör arızası, kopmuş veya gevşemiş zincir, yanmış tahrik motoru, arızalı hız kontrol ünitesi (invertör) ve sıkışmış rulman tipik nedenlerdir.",
+      },
+      {
+        title: "Bant hızı panelde yazandan farklı",
+        text: "Kalibrasyonu kaymış hız kontrol ünitesi, gevşemiş zincir veya aşınmış dişli, gerçek geçiş süresini ayarlanan değerden uzaklaştırır.",
+      },
+      {
+        title: "Bant bir tarafa kayıyor, sürtüyor",
+        text: "Gerginlik ayarının iki tarafta eşit olmaması, eğrilmiş şaft veya deforme olmuş bant örgüsü kaymaya ve gövdeye sürtmeye yol açar.",
+      },
+      {
+        title: "Ürün girişte ve çıkışta farklı pişiyor",
+        text: "Tıkalı üfleme kanalları, kirlenmiş hava plakaları ve tek taraflı çalışan rezistans grubu bant boyunca ısı dengesizliği yaratır.",
+      },
+      {
+        title: "Fan gürültüsü arttı, hava üflemiyor",
+        text: "Yağ ve un tozu ile kaplanmış fan kanadı, yıpranmış rulman ve gevşemiş kayış hem sesi hem de üfleme verimini bozar.",
+      },
+      {
+        title: "Bant örgüsü açıldı, telleri kırıldı",
+        text: "Ömrünü tamamlamış paslanmaz bantlarda örgü açılması ürünün takılmasına ve tehlikeli sıkışmalara neden olur; bant değişimi gerekir.",
+      },
+    ],
+    scope: [
+      "Bant hızı ölçümü ve gerçek geçiş süresi doğrulaması",
+      "Redüktör bakımı, yağ değişimi ve rulman yenileme",
+      "Zincir gerginlik ayarı, dişli ve şaft değişimi",
+      "Tahrik motoru ve hız kontrol ünitesi (invertör) onarımı",
+      "Paslanmaz konveyör bandı onarımı ve komple değişimi",
+      "Üfleme kanalı ve hava plakası temizliği",
+      "Bant boyunca çok noktalı sıcaklık haritalama",
+      "Rezistans grubu ve gaz brülörü kontrolü",
+      "Periyodik bakım sözleşmesi ve yedek bant tedariki",
+    ],
+    equipment: [
+      "Konveyörlü pizza fırınları",
+      "Bantlı ekmek ve unlu mamul fırınları",
+      "Tünel tipi üretim fırınları",
+      "Çift katlı (üst üste) konveyörlü modeller",
+      "Elektrikli ve gazlı bantlı fırınlar",
+      "Bantlı tost ve sandviç fırınları",
+      "Gıda işleme hattı kurutma fırınları",
+    ],
+    parts: [
+      "Paslanmaz konveyör bandı (örgü tip)",
+      "Redüktör ve tahrik motoru",
+      "Zincir, dişli, şaft ve rulman seti",
+      "Hız kontrol ünitesi (invertör) ve potansiyometre",
+      "Fan motoru, kayış ve fan kanadı",
+      "Rezistans grubu ve güç kontaktörü",
+      "Sıcaklık probu ve emniyet termostatı",
+      "Üfleme kanalı plakaları ve hava yönlendirici",
+      "Giriş/çıkış tel ızgaraları ve koruma sacları",
+    ],
+    faq: [
+      {
+        q: "Konveyör bandı tamir mi edilir, değiştirilir mi?",
+        a: "Bandın birkaç noktasında lokal açılma varsa örgü onarımı yapılır ve bant kullanılmaya devam edilir. Ancak açılma birden fazla bölgede tekrarlıyorsa, teller kırılganlaşmışsa veya bant kalıcı biçimde eğrildiyse onarım geçici olur; bu durumda komple bant değişimi hem daha güvenli hem uzun vadede daha ekonomiktir.",
+      },
+      {
+        q: "Bant hızını kendim ayarlayabilir miyim?",
+        a: "Panelden hız ayarı yapmak operatör işidir, sorun değil. Ancak panelde yazan süre ile gerçek geçiş süresi zamanla ayrışır. Ayarı değiştirmeden önce bir ürünü kronometreyle takip edip gerçek süreyi ölçmenizi öneririz; sapma varsa bu bir ayar değil kalibrasyon veya mekanik aşınma sorunudur.",
+      },
+      {
+        q: "Girişte ve çıkışta pişme farkı neden olur?",
+        a: "Genellikle üfleme kanallarının un tozu ve yağla tıkanmasından kaynaklanır; hava tek bölgeye yığılır. Kanal temizliği çoğu zaman sorunu çözer. Temizlik sonrası fark sürüyorsa rezistans gruplarının veya brülör bölgelerinin tek tek çalışıp çalışmadığı ölçülür.",
+      },
+      {
+        q: "Konveyörlü fırın bakımı ne sıklıkta yapılmalı?",
+        a: "Günde 10 saatin üzerinde çalışan bantlı fırınlarda 3 ayda bir bakım öneriyoruz. Bakım kapsamı; bant hızı doğrulaması, redüktör yağ kontrolü, zincir gerginliği, rulman gözlemi, fan ve üfleme kanalı temizliği ile çok noktalı sıcaklık ölçümünü içerir. Mekanik aşınmanın erken yakalanması, bant kopmasıyla gelen ani duruşları büyük ölçüde önler.",
+      },
+      {
+        q: "Bant dururken fırın çalışmaya devam ediyor, tehlikeli mi?",
+        a: "Evet, riskli bir durumdur. Bant durduğunda içerideki ürün sabit ısıda kalır ve kısa sürede yanmaya başlar. Bandın durduğunu fark ettiğinizde önce ısıtmayı kapatın, fanı bir süre çalışır bırakın ve içeriyi boşaltın. Bazı modellerde bant duruşunda ısıtmayı kesen emniyet devresi vardır; serviste bu devrenin çalıştığını da kontrol ediyoruz.",
+      },
+      {
+        q: "Yedek bant ne kadar sürede temin edilir?",
+        a: "Yaygın ölçülerde paslanmaz konveyör bantlarını stokta tutuyoruz; aynı gün veya ertesi gün montaj yapılabilir. Özel genişlik ve örgü tipi gerektiren modellerde bant ölçüye göre imal edilir, süre ortalama 3-7 iş günüdür. Bu sürede cihazı kısıtlı kapasiteyle çalışır durumda tutacak geçici çözümler uygulanır.",
+      },
+    ],
+    priceNote:
+      "Konveyörlü fırın tamiri fiyatı; arızanın tahrik tarafında mı ısı tarafında mı olduğuna göre değişir. Zincir ayarı ile redüktör veya komple bant değişimi çok farklı kalemlerdir; kesin tutar yerinde ölçüm sonrası bildirilir.",
+    related: [
+      { slug: "pizza-firini-servisi", note: "Taş tabanlı pizza fırınları için" },
+      { slug: "sanayi-tipi-firin-servisi", note: "Tünel ve yüksek kapasiteli üretim hatlarının tamamı için" },
+    ],
+  },
+  {
+    slug: "donerli-firin-servisi",
+    name: "Dönerli Fırın Servisi ve Tamiri",
+    navName: "Dönerli Fırın Servisi",
+    h1: "Dönerli (Rotary) Fırın Servisi ve Tamiri",
+    icon: "rotary",
+    metaTitle: "Dönerli Fırın Servisi ve Tamiri | Rotary Fırın",
+    metaDescription:
+      "Dönerli rotary fırın servisi ve tamiri: araba dönmemesi, buhar sorunu, brülör ayarı, fan ve redüktör arızalarında yerinde teknik servis ve periyodik bakım.",
+    excerpt:
+      "Dönerli (rotary) ekmek ve pastane fırınlarında araba tahriki, buhar grubu, brülör ve fan arızalarına ağır hizmet tipi müdahale.",
+    keywords: [
+      "dönerli fırın servisi",
+      "döner fırın tamiri",
+      "rotary fırın servisi",
+      "dönerli ekmek fırını tamiri",
+      "dönerli fırın buhar arızası",
+    ],
+    intro: [
+      "Dönerli fırın, tepsi arabasının pişirme boyunca kendi ekseninde dönmesi sayesinde her tepsiye eşit ısı ulaştırır. Ekmek, simit, poğaça ve pastane üretiminde standart hâline gelmesinin nedeni budur. Aynı mekanizma cihazın en kritik parçasıdır: tahrik motoru, redüktör, tabla yatağı veya asma aparatı arızalandığında pişirme kalitesi anında bozulur ve üretim durur.",
+      "Dönerli fırın servisi ve tamiri işinde en sık gelen üç şikâyet birbirine bağlıdır: araba dönmüyor, buhar yetersiz, ürün bir tarafta fazla pişiyor. Araba dönmediğinde hava akışının doğal dengesi kaybolur ve tek taraflı pişirme başlar; işletme bunu ısı problemi sanar. Bu yüzden teşhis daima dönüş mekanizmasının kontrolüyle açılır: motor akımı, redüktör sesi, yatak boşluğu ve tabla dengesi ölçülür.",
+      "İkinci eksen buhar grubudur. Dönerli fırınlarda buhar, kabuk parlaklığı ve hacim için belirleyicidir. Buhar bloğundaki dökme demir kütlelerin kireçlenmesi ve nozul tıkanması, operatörü daha uzun buhar vermeye iter; bu hem enerji israfı hem de kabuk kalitesinde bozulma demektir. Serviste blok temizlenir, nozullar açılır ve su hattı değerlendirilir.",
+    ],
+    symptoms: [
+      {
+        title: "Araba dönmüyor veya zorlanarak dönüyor",
+        text: "Tahrik motoru, redüktör, kayış veya zincir kopması, tabla yatağı sıkışması ve asma aparatının kancasındaki aşınma en sık nedenlerdir.",
+      },
+      {
+        title: "Buhar yetersiz, kabuk mat çıkıyor",
+        text: "Kireçlenmiş buhar bloğu, tıkalı nozullar, arızalı solenoid valf ve düşük su basıncı buhar üretimini doğrudan düşürür.",
+      },
+      {
+        title: "Ürün bir tarafta fazla pişiyor",
+        text: "Duran veya yavaşlamış araba, dengesiz yerleşmiş tabla, deforme fan kanadı ve tıkanmış hava kanalları homojenliği bozar.",
+      },
+      {
+        title: "Gaz brülörü tutmuyor veya sık sık kilitleniyor",
+        text: "Kirlenmiş ateşleme elektrodu, oksitlenmiş iyonizasyon çubuğu, gaz valfi bobini ve zayıf baca çekişi yanma emniyetini devreye sokar.",
+      },
+      {
+        title: "Fırın ısıyı tutamıyor, ısınma süresi uzadı",
+        text: "Çökmüş gövde izolasyonu, sertleşmiş kapı fitili ve ayarı bozulmuş brülör hava-yakıt oranı ısınma süresini belirgin şekilde uzatır.",
+      },
+      {
+        title: "Fan sesi arttı, titreşim var",
+        text: "Yıpranmış fan rulmanı, un tozu ile dengesi bozulmuş kanat ve gevşemiş kayış, hem gürültü hem de hava debisi kaybı üretir.",
+      },
+    ],
+    scope: [
+      "Araba tahrik motoru, redüktör ve kayış-zincir onarımı",
+      "Tabla yatağı, asma aparatı ve kanca değişimi",
+      "Buhar bloğu kireç çözme ve nozul açma",
+      "Gaz brülörü ayarı, ateşleme ve iyonizasyon kontrolü",
+      "Baca çekişi ve yanma emniyeti doğrulaması",
+      "Fan motoru, rulman ve kanat balanslama",
+      "Kapı fitili, menteşe ve gövde izolasyon yenileme",
+      "Sıcaklık ve buhar zamanlayıcı kalibrasyonu",
+      "Periyodik bakım sözleşmesi ve yedek parça tedariki",
+    ],
+    equipment: [
+      "Tek arabalı dönerli (rotary) fırınlar",
+      "Çift arabalı yüksek kapasiteli modeller",
+      "Asma tip (kancalı) dönerli fırınlar",
+      "Tabla tip (döner platformlu) fırınlar",
+      "Gazlı, motorinli ve elektrikli modeller",
+      "Ekmek, simit ve poğaça üretim fırınları",
+      "Pastane tipi dönerli fırınlar",
+    ],
+    parts: [
+      "Araba tahrik motoru ve redüktör",
+      "Tabla yatağı, rulman ve asma kancası",
+      "Tahrik kayışı ve zincir seti",
+      "Buhar bloğu dökme kütleleri ve nozullar",
+      "Solenoid valf ve su pompası",
+      "Gaz valfi, ateşleme elektrodu, iyonizasyon çubuğu",
+      "Fan motoru, rulman ve fan kanadı",
+      "Kapı fitili, menteşe ve cam",
+      "Sıcaklık probu, emniyet termostatı ve kontrol kartı",
+    ],
+    faq: [
+      {
+        q: "Araba dönmüyorsa fırını çalıştırmaya devam edebilir miyim?",
+        a: "Etmemenizi öneririz. Dönerli fırının ısı dengesi arabanın dönmesine göre tasarlanmıştır; sabit arabada ürünün bir tarafı yanarken diğer tarafı çiğ kalır ve fire artar. Ayrıca dönmeyi engelleyen mekanik sıkışma zorlandığında redüktör veya motor sarımı zarar görebilir; küçük bir arıza büyük bir parça değişimine dönüşür.",
+      },
+      {
+        q: "Buhar veriyorum ama kabuk parlamıyor, sebebi ne?",
+        a: "Neredeyse her zaman buhar bloğunun kireçlenmesi ve nozulların tıkanmasıdır. Blok ısı depolayamadığında verilen su buhara dönüşmeden hazneye damlar; nem oluşur ama kabuk için gereken ani buhar şoku olmaz. Blok temizliği ve nozul açma işlemi sonrası kabuk kalitesi genellikle ilk fırınlamada geri gelir.",
+      },
+      {
+        q: "Dönerli fırın ile katlı fırın arasında servis farkı var mı?",
+        a: "Evet, belirgin bir fark var. Katlı fırınlarda ağırlık ısı ve buhar tarafındadır; dönerli fırında bunlara ek olarak bir mekanik tahrik sistemi vardır. Bu yüzden dönerli fırın bakımında redüktör, yatak, kayış ve kanca aşınması ayrı bir kalem olarak takip edilir. Katlı taş tabanlı modeller için matador fırın servisi sayfamız daha uygundur.",
+      },
+      {
+        q: "Motorinli dönerli fırınlara da servis veriyor musunuz?",
+        a: "Evet. Gazlı, motorinli ve elektrikli dönerli fırınların tamamına servis veriyoruz. Motorinli modellerde brülör memesi, yakıt filtresi, pompa basıncı ve ateşleme trafosu ayrı bir kontrol listesi olarak ele alınır; yanma verimi baca gazı ölçümüyle doğrulanır.",
+      },
+      {
+        q: "Periyodik bakım hangi aralıkla yapılmalı?",
+        a: "Günde 12 saatin üzerinde çalışan ekmek üretim tesislerinde 3 ayda bir, normal yoğunluktaki pastane ve fırınlarda 6 ayda bir bakım öneriyoruz. Bakımda tahrik sistemi, buhar bloğu, brülör ayarı, izolasyon ve kapı fitili birlikte değerlendirilir. Bu cihazlarda ani duruşların büyük bölümü ihmal edilmiş mekanik aşınmadan doğar.",
+      },
+      {
+        q: "Fırınım eski model, yedek parçası bulunur mu?",
+        a: "Dönerli fırınlarda tahrik ve buhar grubu parçalarının çoğu standart endüstriyel bileşenlerdir; redüktör, rulman, kayış ve solenoid valf muadilleriyle karşılanabilir. Gövdeye özel parçalarda (kanca, yatak, kapı fitili) ölçüye göre imalat yapıyoruz. Onarımın ekonomik olmadığı durumlarda bunu açıkça söyler, yenileme alternatifini gerekçesiyle sunarız.",
+      },
+    ],
+    priceNote:
+      "Dönerli fırın tamiri fiyatı; arızanın tahrik, buhar veya yanma grubunda olmasına ve değişecek parçaya göre belirlenir. Kayış ayarı ile redüktör değişimi arasında büyük fark vardır; kesin tutar yerinde teşhis sonrası bildirilir.",
+    related: [
+      { slug: "matador-firin-servisi", note: "Katlı ve sabit taş tabanlı modeller için" },
+      { slug: "sanayi-tipi-firin-servisi", note: "Üretim hattının tamamını kapsayan ağır hizmet tipi servis" },
+    ],
+  },
+  {
+    slug: "matador-firin-servisi",
+    name: "Matador Fırın Servisi ve Tamiri",
+    navName: "Matador Fırın Servisi",
+    h1: "Matador Fırın Servisi ve Tamiri",
+    icon: "deck",
+    metaTitle: "Matador Fırın Servisi ve Tamiri | Katlı Taş Fırın",
+    metaDescription:
+      "Matador fırın servisi ve tamiri: katlı taş tabanlı buharlı ekmek fırınlarında taban ısısı, buhar bloğu, rezistans ve kapı arızalarında yerinde teknik servis.",
+    excerpt:
+      "Katlı taş tabanlı buharlı ekmek fırınlarında taban ısısı, buhar grubu, rezistans ve izolasyon sorunlarına kat bazında müdahale.",
+    keywords: [
+      "matador fırın servisi",
+      "matador fırın tamiri",
+      "katlı taş fırın servisi",
+      "buharlı ekmek fırını tamiri",
+      "deck fırın servisi",
+    ],
+    intro: [
+      "Matador fırın, taş tabanlı katların üst üste dizildiği, her katın kendi üst ve alt rezistans grubu ile buhar girişine sahip olduğu klasik ekmek ve pide fırınıdır. Adı Werner & Pfleiderer'in Matador serisinden gelir; bugün Türkiye'de bu yapıdaki katlı taş tabanlı buharlı fırınların tamamı için kullanılan yaygın bir tanımdır. Ekmek, pide, poğaça ve pastane üretiminde taban ısısının doğrudan taştan gelmesi nedeniyle hâlâ tercih edilir.",
+      "Matador fırın servisi ve tamiri işinin ayırt edici yanı, arızanın çoğu zaman cihazın tamamında değil tek bir katta olmasıdır. İşletme 'fırın iyi pişirmiyor' dediğinde ilk yapılan iş, katları tek tek ölçmektir: her katın taban ve tavan sıcaklığı ayrı ayrı okunur, üst ve alt rezistans grupları bağımsız test edilir. Genellikle bir katın alt grubunda tek bir rezistans yanmıştır ve cihaz çalışmaya devam ettiği için sorun geç fark edilir.",
+      "İkinci kritik nokta taban taşıdır. Yıllar içinde ısıl döngüye maruz kalan şamot taban çatlar, gözenekleri kapanır ve ısı depolama kapasitesini kaybeder. Rezistans değişip taş kontrol edilmediğinde şikâyet tam olarak geçmez. Bu yüzden her serviste taban taşının durumu da raporlanır ve gerekiyorsa ölçüye özel taş kesimi ile değişim yapılır.",
+    ],
+    symptoms: [
+      {
+        title: "Bir kat diğerlerinden farklı pişiriyor",
+        text: "O kata ait üst veya alt rezistans grubundan birinin yanması, kat kontaktörünün arızalanması ya da prob sapması tipik nedendir.",
+      },
+      {
+        title: "Ekmek tabanı yeterince kızarmıyor",
+        text: "Yorulmuş veya çatlamış taban taşı, alt rezistans kaybı ve yetersiz ön ısıtma süresi taban ısısını düşürür.",
+      },
+      {
+        title: "Buhar zayıf, kabuk parlaklığı kayboldu",
+        text: "Kireçlenmiş buhar bloğu, tıkalı buhar borusu ve arızalı solenoid valf buhar şokunu ortadan kaldırır.",
+      },
+      {
+        title: "Kapıdan ısı ve buhar kaçıyor",
+        text: "Sertleşmiş kapı fitili, ayarı kaçmış menteşe ve gevşemiş kilit, hem enerji kaybına hem de kabuk kalitesinde düşüşe yol açar.",
+      },
+      {
+        title: "Fırın geç ısınıyor, tüketim arttı",
+        text: "Çökmüş gövde izolasyonu, nem çekmiş cam yünü ve kaçak yapan kapı contası ısınma süresini ve faturayı birlikte yükseltir.",
+      },
+      {
+        title: "Panelde hata kodu, kat kilitleniyor",
+        text: "Emniyet termostatının atması, prob açık devre hatası ve kat kontrol kartındaki röle arızası cihazı korumaya alır.",
+      },
+    ],
+    scope: [
+      "Kat bazında taban ve tavan sıcaklık ölçümü",
+      "Üst ve alt rezistans grubu testi ve değişimi",
+      "Şamot taban taşı kontrolü, ölçüye özel kesim ve değişim",
+      "Buhar bloğu kireç çözme ve buhar borusu açma",
+      "Solenoid valf, su hattı ve zamanlayıcı kontrolü",
+      "Kapı fitili, menteşe, kilit ve cam yenileme",
+      "Gövde izolasyonu yenileme ve termal kamera taraması",
+      "Kat kontaktörleri, prob ve kontrol kartı onarımı",
+      "Periyodik bakım sözleşmesi ve yedek parça tedariki",
+    ],
+    equipment: [
+      "Katlı taş tabanlı buharlı ekmek fırınları",
+      "2, 3, 4 ve 5 katlı matador modelleri",
+      "Pide ve lahmacun katlı fırınları",
+      "Pastane tipi katlı deck fırınlar",
+      "Elektrikli ve gazlı katlı modeller",
+      "Buhar jeneratörlü ve blok buharlı tipler",
+      "Fermantasyon dolabı entegre modeller",
+    ],
+    parts: [
+      "Üst ve alt rezistans grupları",
+      "Şamot taban taşı (ölçüye özel)",
+      "Kat kontaktörü ve termik röle",
+      "Buhar bloğu kütleleri ve buhar borusu",
+      "Solenoid valf ve buhar zamanlayıcı",
+      "Kapı fitili, menteşe, kilit ve kapı camı",
+      "Sıcaklık probu ve emniyet termostatı",
+      "Kat kontrol kartı ve tuş takımı filmi",
+      "Gövde izolasyon malzemesi (cam yünü / seramik elyaf)",
+    ],
+    faq: [
+      {
+        q: "Tek kat bozuk, diğer katları kullanmaya devam edebilir miyim?",
+        a: "Çoğu modelde evet; katlar bağımsız beslendiği için arızalı kat kapatılıp diğerleri kullanılabilir. Ancak arıza kat kontaktöründe veya besleme hattındaysa devam etmek riskli olur; ısınan bir kontaktör yangın riski taşır. Emin değilseniz o katın şalterini indirin ve serviste hattı kontrol ettirin.",
+      },
+      {
+        q: "Taban taşı ne zaman değişmeli?",
+        a: "Taş çatlamışsa, yüzeyi çukurlaşmışsa, hamur belirgin şekilde yapışmaya başladıysa veya rezistanslar sağlam olduğu halde taban kızarmıyorsa değişim zamanı gelmiştir. Ticari kullanımda şamot taban ömrü ortalama 4-8 yıldır; yoğun üretim ve sık ısı değişimi bu süreyi kısaltır. Taşları ölçüye özel kesip genleşme payı bırakarak monte ediyoruz.",
+      },
+      {
+        q: "Matador fırın ile dönerli fırın arasındaki fark nedir?",
+        a: "Matador katlı ve sabittir; ürün taşın üzerinde durur, ısının önemli bölümü taban taşından iletim yoluyla gelir. Dönerli fırında ürün arabayla döner ve ısı ağırlıklı olarak sıcak hava dolaşımıyla aktarılır. Matador daha iyi taban kızarması ve klasik ekmek kabuğu verir; dönerli daha yüksek kapasite ve daha az operatör bağımlılığı sağlar.",
+      },
+      {
+        q: "Buhar kalitesini nasıl geri kazanırım?",
+        a: "Önce buhar bloğunun kireci çözülür ve buhar boruları mekanik olarak açılır. Ardından solenoid valf ve zamanlayıcı test edilir. Bu üç adım sorunların çoğunu çözer. Kalıcı sonuç için su sertliği ölçülmeli, sert su bölgesindeyseniz yumuşatma sistemi değerlendirilmelidir; aksi halde blok birkaç ay içinde yeniden kireçlenir.",
+      },
+      {
+        q: "Eski matador fırınların parçası bulunuyor mu?",
+        a: "Evet. Bu fırınların bileşenleri büyük ölçüde standarttır: rezistans, kontaktör, prob, solenoid valf ve fitil ölçüye göre temin edilebilir veya imal edilebilir. Özel ölçü rezistans sarımı, kapı fitili kesimi ve şamot taş kesimi bizim düzenli yaptığımız işlerdir; üretimden kalkmış model olması tek başına engel değildir.",
+      },
+      {
+        q: "İzolasyon yenilemeye değer mi?",
+        a: "Gövdesi sağlam bir fırında izolasyon yenileme, ısınma süresini ve enerji tüketimini gözle görülür biçimde düşürdüğü için genellikle kendini kısa sürede amorti eder. Karar öncesinde termal kamerayla gövde taraması yapıyor, kaybın gerçekten izolasyondan mı yoksa kapı fitilinden mi kaynaklandığını ölçerek gösteriyoruz.",
+      },
+    ],
+    priceNote:
+      "Matador fırın tamiri fiyatı; arızanın kaç katı etkilediğine, rezistans mı taban taşı mı değişeceğine ve buhar grubunun durumuna göre belirlenir. Kat bazında ölçüm sonrası kalem kalem bildirilir.",
+    related: [
+      { slug: "pide-lahmacun-firin-servisi", note: "Yalnızca pide ve lahmacun üretimi yapan yüksek taban ısılı fırınlar için" },
+      { slug: "donerli-firin-servisi", note: "Tepsi arabası dönen rotary modeller için" },
+    ],
+  },
+  {
+    slug: "pide-lahmacun-firin-servisi",
+    name: "Pide ve Lahmacun Fırını Servisi ve Tamiri",
+    navName: "Pide & Lahmacun Fırın Servisi",
+    h1: "Pide ve Lahmacun Fırını Servisi ve Tamiri",
+    icon: "flame",
+    metaTitle: "Pide ve Lahmacun Fırını Servisi ve Tamiri | İstanbul",
+    metaDescription:
+      "Pide ve lahmacun fırını servisi: taş tabanlı, gazlı ve odun ateşli fırınlarda taban ısısı, taş çatlağı, brülör ve baca sorunlarında yerinde teknik servis.",
+    excerpt:
+      "Taş tabanlı, gazlı, elektrikli ve odun ateşli pide-lahmacun fırınlarında taban ısısı, taş, brülör ve baca çekişi sorunlarına müdahale.",
+    keywords: [
+      "pide fırını servisi",
+      "lahmacun fırını tamiri",
+      "pide fırını tamircisi",
+      "taş tabanlı pide fırını servisi",
+      "lahmacun fırını taş değişimi",
+    ],
+    intro: [
+      "Pide ve lahmacun fırını, endüstriyel fırınlar arasında en yüksek taban sıcaklığıyla çalışan gruptur. Lahmacunun 90-120 saniyede pişmesi, tabandan gelen ani ve yoğun ısıya bağlıdır. Bu yüzden bu fırınlarda arıza, çoğu zaman bir parçanın bozulmasından değil, taban ısısının sessizce düşmesinden gelir; işletme bunu 'eskisi gibi pişmiyor, süre uzadı' diye tarif eder.",
+      "Pide fırını servisi ve tamiri işinde teşhis, kızılötesi termometreyle taban haritalaması yaparak açılır. Boş fırında taban farklı noktalardan ölçülür; noktalar arasında 30 °C'yi aşan fark varsa sorun ısı kaynağında değil taşta veya ısı dağıtımındadır. Ardından ısı kaynağı tipine göre yol ayrılır: gazlı modellerde brülör ayarı, hava-yakıt oranı ve baca çekişi; elektriklilerde alt rezistans grubu ve prob kalibrasyonu; odun ateşli modellerde ocak yapısı ve baca kontrolü.",
+      "Bu fırınlarda ikinci en sık kalem taban taşıdır. Yoğun servis ve sürekli ısı değişimi şamot tabanı yorar; yüzey çukurlaşır, hamur yapışmaya başlar ve pişirme süresi uzar. Taş değişimi ölçüye özel kesim, genleşme payı ve kademeli ilk ısıtma (kürleme) prosedürüyle yapılır — bu üç adımdan biri atlandığında yeni taş de kısa sürede çatlar.",
+    ],
+    symptoms: [
+      {
+        title: "Lahmacun pişme süresi belirgin şekilde uzadı",
+        text: "Düşen taban ısısı, yorulmuş şamot taş, alt rezistans kaybı veya bozulmuş brülör ayarı en sık nedenlerdir.",
+      },
+      {
+        title: "Taban çiğ kalıyor, üst yüzey yanıyor",
+        text: "Taş ısı depolayamadığında üstten gelen ısı baskın gelir; ürünün üstü kararırken tabanı hamur kalır.",
+      },
+      {
+        title: "Taban taşı çatlamış veya çukurlaşmış",
+        text: "Ani ısı değişimi, ıslak temizlik ve montajda genleşme payı bırakılmaması taşta kalıcı çatlaklara yol açar.",
+      },
+      {
+        title: "Fırının bir bölgesi soğuk kalıyor",
+        text: "Tek taraflı çalışan brülör, tıkanmış alev dağıtım kanalı ve dengesiz oturmuş taş, taban boyunca sıcaklık farkı yaratır.",
+      },
+      {
+        title: "Alev tutmuyor veya sık sık sönüyor",
+        text: "Kirlenmiş ateşleme elektrodu, oksitlenmiş iyonizasyon çubuğu, gaz valfi bobini ve yetersiz baca çekişi yanma emniyetini kilitler.",
+      },
+      {
+        title: "İçeride duman kalıyor, geri tepme var",
+        text: "Tıkanmış veya yanlış ölçülendirilmiş baca, davlumbaz emiş yetersizliği ve kapatılmış hava girişi dumanın dışarı atılmasını engeller.",
+      },
+    ],
+    scope: [
+      "Kızılötesi termometreyle taban ısı haritalaması",
+      "Şamot taban taşı kontrolü, ölçüye özel kesim ve değişim",
+      "Kademeli ilk ısıtma (kürleme) prosedürünün uygulanması",
+      "Gaz brülörü ayarı, hava-yakıt oranı ve alev dağılımı",
+      "Ateşleme elektrodu ve iyonizasyon çubuğu bakımı",
+      "Baca çekişi ölçümü ve davlumbaz emiş kontrolü",
+      "Alt ve üst rezistans grubu testi (elektrikli modeller)",
+      "Sıcaklık probu kalibrasyonu ve termostat ayarı",
+      "Kapı, gözetleme camı ve ısı yalıtımı yenileme",
+    ],
+    equipment: [
+      "Taş tabanlı pide ve lahmacun fırınları",
+      "Katlı pide fırınları",
+      "Gazlı model pide fırınları",
+      "Elektrikli taş tabanlı fırınlar",
+      "Odun ateşli geleneksel fırınlar",
+      "Döner tablalı lahmacun fırınları",
+      "Konveyörlü lahmacun ve pide fırınları",
+    ],
+    parts: [
+      "Şamot taban taşı (ölçüye özel kesim)",
+      "Alt ve üst rezistans grubu",
+      "Gaz valfi ve brülör memesi",
+      "Ateşleme elektrodu ve iyonizasyon çubuğu",
+      "Alev dağıtım borusu ve hava ayar bileziği",
+      "Sıcaklık probu ve emniyet termostatı",
+      "Kapı contası, menteşe ve gözetleme camı",
+      "Döner tabla motoru ve yatağı",
+      "Baca damperi ve bağlantı elemanları",
+    ],
+    faq: [
+      {
+        q: "Lahmacun eskisi gibi pişmiyor, sebebi ne olabilir?",
+        a: "En sık neden taban ısısının düşmesidir ve bunun iki kaynağı vardır: yorulmuş taban taşı veya zayıflamış ısı kaynağı. Ayrımı yapmanın pratik yolu şudur: fırını normal süre ön ısıtın, boş taban sıcaklığını kızılötesi termometreyle ölçün. Sıcaklık normalse sorun taşın ısı depolama kapasitesinde, düşükse brülörde veya rezistanstadır.",
+      },
+      {
+        q: "Taban taşını kendim değiştirebilir miyim?",
+        a: "Teknik olarak mümkün ama üç ayrıntı işi belirler: ölçü fırın soğukken ve iç tabandan alınmalı, kenarlara genleşme payı bırakılmalı, montaj sonrası kademeli ilk ısıtma uygulanmalıdır. Bu adımlar atlandığında yeni taş ilk haftalarda çatlar. Montajı biz yaptığımızda kürleme prosedürünü uygular ve yazılı olarak işletmeye bırakırız.",
+      },
+      {
+        q: "Odun ateşli fırınlara da servis veriyor musunuz?",
+        a: "Evet. Odun ateşli fırınlarda müdahale ağırlıklı olarak ocak yapısı, taban taşı, kubbe sıvası, baca çekişi ve davlumbaz emişi üzerinedir. Gazlı dönüşüm yapılmış modellerde ayrıca brülör ayarı ve yanma emniyeti kontrol edilir. Odun ateşli fırınlarda baca temizliği ihmal edilmemesi gereken bir güvenlik kalemidir.",
+      },
+      {
+        q: "Fırından içeri duman doluyor, tehlikeli mi?",
+        a: "Evet, ciddiye alınması gerekir. Duman geri tepmesi çoğunlukla baca tıkanıklığından, yetersiz baca kesitinden veya mutfağa taze hava girişinin kapatılmasından kaynaklanır. Gazlı modellerde bu durum eksik yanma ve karbonmonoksit riski demektir. Bacayı ve hava girişini kontrol ettirmeden cihazı yoğun kullanmayın.",
+      },
+      {
+        q: "Pide fırını servisi ile pizza fırını servisi aynı şey mi?",
+        a: "Yakın ama aynı değil. İkisi de taş tabanlıdır, ancak pide ve lahmacun fırınları genellikle daha yüksek taban sıcaklığında ve çok daha kısa pişirme süresiyle çalışır; taş kalınlığı, ısı geri kazanım hızı ve brülör kapasitesi buna göre seçilir. Konveyörlü veya taş tabanlı pizza fırınınız varsa pizza fırını servisi sayfamız daha uygundur.",
+      },
+      {
+        q: "Ne sıklıkta bakım yaptırmalıyım?",
+        a: "Gün boyu servis veren pide ve lahmacun salonlarında 6 ayda bir bakım öneriyoruz. Bakım kapsamı; taban ısı haritalaması, taş durumu değerlendirmesi, brülör ayarı ve alev gözlemi, baca çekişi ölçümü ile kapı ve yalıtım kontrolünü içerir. Baca ve davlumbaz temizliği yoğun işletmelerde 3 ayda bir yapılmalıdır.",
+      },
+    ],
+    priceNote:
+      "Pide ve lahmacun fırını tamiri fiyatı; sorunun taş tarafında mı ısı kaynağında mı olduğuna göre değişir. Brülör ayarı ile komple taban taşı değişimi çok farklı kalemlerdir; taban ısı ölçümü sonrası kesin tutar bildirilir.",
+    related: [
+      { slug: "matador-firin-servisi", note: "Katlı pide fırınlarında kat bazında ölçüm ve buhar grubu" },
+      { slug: "pizza-firini-servisi", note: "Taş tabanlı ve konveyörlü pizza fırınları için" },
+    ],
   },
   {
     slug: "pizza-firin-tasi-degisimi",

@@ -63,6 +63,13 @@ export default async function ServiceDetail({ params }: Props) {
   const matchedBrands = getServiceBrands(service.slug);
   const sidebarBrands = (matchedBrands.length ? matchedBrands : brands).slice(0, 10);
 
+  /** Daha spesifik kardes hizmet sayfalari — keyword cakismasini onler */
+  const relatedServices = (service.related ?? [])
+    .map((r) => ({ note: r.note, target: getService(r.slug) }))
+    .filter((x): x is { note: string; target: NonNullable<typeof x.target> } =>
+      Boolean(x.target)
+    );
+
   return (
     <>
       <JsonLd
@@ -93,6 +100,40 @@ export default async function ServiceDetail({ params }: Props) {
               <p key={i}>{p}</p>
             ))}
           </div>
+
+          {/* Daha spesifik hizmet sayfalari */}
+          {relatedServices.length > 0 && (
+            <section className="mt-12 rounded-2xl border border-ink-100 bg-ink-50/60 p-7 sm:p-8">
+              <h2 className="font-display text-[17px] font-bold text-ink-900">
+                Cihazınız daha özel bir tipteyse
+              </h2>
+              <p className="mt-3 text-[15.5px] leading-relaxed text-ink-600">
+                Aşağıdaki başlıklar bu hizmetin alt dallarıdır ve o cihaz tipine
+                özel arıza belirtilerini, ölçüm adımlarını ve yedek parçaları
+                ayrıntılı anlatır.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {relatedServices.map((r) => (
+                  <li key={r.target.slug}>
+                    <Link
+                      href={`/hizmetler/${r.target.slug}`}
+                      className="group flex items-start gap-3 rounded-xl border border-ink-100 bg-white p-4 transition-all hover:border-ember-200 hover:shadow-soft"
+                    >
+                      <IconArrow className="mt-1 h-4 w-4 shrink-0 text-ink-300 transition-all group-hover:translate-x-0.5 group-hover:text-ember-500" />
+                      <span>
+                        <span className="block font-display text-[15.5px] font-bold text-ink-900 transition-colors group-hover:text-ember-600">
+                          {r.target.name}
+                        </span>
+                        <span className="mt-1.5 block text-[14.5px] leading-relaxed text-ink-500">
+                          {r.note}
+                        </span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Ariza belirtileri */}
           <section className="mt-14">

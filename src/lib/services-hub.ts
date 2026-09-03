@@ -13,7 +13,7 @@ import type { FaqItem } from "./services";
 export const hubIntro: string[] = [
   "Endüstriyel fırın ve mutfak servis hizmetlerimiz, İstanbul'da üretim yapan otel, restoran, pastane, catering ve fabrika mutfaklarının tamamına yerinde veriliyor. Konveksiyonel ve kombi fırınlardan katlı ekmek fırınlarına, konveyör bantlı pizza fırınlarından bulaşıkhane ve soğutma gruplarına kadar mutfaktaki her ekipman aynı ekip tarafından takip edilir. Amaç cihazı çalışır hale getirmek değil, arızadan önceki pişirme performansına döndürmektir.",
   "Bir mutfakta arıza nadiren tek başına gelir. Isınmayan bir fırının arkasında yanmış bir rezistans olabileceği gibi, yapışmış bir güç kontaktörü, kalibrasyonu kaymış bir sıcaklık probu veya kireçlenmiş bir buhar hattı da olabilir. Bu yüzden her müdahale gözle muayeneyle değil, elektriksel ölçüm ve fonksiyon testiyle başlar: rezistans direnci, izolasyon, faz dengesi, prob direnç–sıcaklık eğrisi ve gazlı modellerde iyonizasyon akımı tek tek kontrol edilir.",
-  "Aşağıdaki altı hizmet başlığı, cihaz tipine göre uzmanlaşmış ekipleri temsil eder. Hangi başlığa gideceğinizden emin değilseniz bu sayfadaki seçim tablosunu ve arıza belirtisi tablosunu kullanın; ikisi de sizi doğru hizmet sayfasına veya konuyu ayrıntılı anlatan teknik yazıya yönlendirir.",
+  "Aşağıdaki hizmet başlıklarının her biri, cihaz tipine göre uzmanlaşmış bir ekibi temsil eder. Hangi başlığa gideceğinizden emin değilseniz bu sayfadaki seçim tablosunu ve arıza belirtisi tablosunu kullanın; ikisi de sizi doğru hizmet sayfasına veya konuyu ayrıntılı anlatan teknik yazıya yönlendirir.",
 ];
 
 /** Bolum 4 — "Hangi hizmeti secmeliyim?" (featured snippet adayi) */
@@ -26,16 +26,40 @@ export type ChooserRow = {
 
 export const hubChooser: ChooserRow[] = [
   {
-    device: "Konveksiyonel / kombi fırın",
-    symptom: "Buhar gelmiyor, fan ses yapıyor, panelde kart hatası var",
+    device: "Konveksiyonel fırın (yalnızca fanlı)",
+    symptom: "Tepsiler arasında pişme farkı, fan ses yapıyor, panelde kart hatası",
     serviceSlug: "konveksiyonel-firin-servisi",
     serviceLabel: "Konveksiyonel Fırın Servisi",
   },
   {
-    device: "Katlı, döner, tünel veya konveyör fırın",
-    symptom: "Bant durdu, pano arızası, katlar arasında ısı dengesizliği",
-    serviceSlug: "sanayi-tipi-firin-servisi",
-    serviceLabel: "Sanayi Tipi Fırın Servisi",
+    device: "Kombi / buharlı fırın",
+    symptom: "Buhar gelmiyor, ekranda su hatası, yıkama programı tamamlanmıyor",
+    serviceSlug: "kombi-firin-servisi",
+    serviceLabel: "Kombi Fırın Servisi",
+  },
+  {
+    device: "Konveyörlü (bantlı) fırın",
+    symptom: "Bant durdu veya yavaşladı, girişle çıkış arasında pişme farkı var",
+    serviceSlug: "konveyorlu-firin-servisi",
+    serviceLabel: "Konveyörlü Fırın Servisi",
+  },
+  {
+    device: "Dönerli (rotary) fırın",
+    symptom: "Araba dönmüyor, buhar zayıf, ürün bir tarafta fazla pişiyor",
+    serviceSlug: "donerli-firin-servisi",
+    serviceLabel: "Dönerli Fırın Servisi",
+  },
+  {
+    device: "Matador / katlı taş tabanlı ekmek fırını",
+    symptom: "Bir kat farklı pişiriyor, taban kızarmıyor, kabuk parlaklığı gitti",
+    serviceSlug: "matador-firin-servisi",
+    serviceLabel: "Matador Fırın Servisi",
+  },
+  {
+    device: "Pide ve lahmacun fırını",
+    symptom: "Pişme süresi uzadı, taban ısısı düştü, alev tutmuyor",
+    serviceSlug: "pide-lahmacun-firin-servisi",
+    serviceLabel: "Pide & Lahmacun Fırın Servisi",
   },
   {
     device: "Taş tabanlı veya konveyörlü pizza fırını",
@@ -48,6 +72,12 @@ export const hubChooser: ChooserRow[] = [
     symptom: "Hamur taşa yapışıyor, taş kırık, yüzey çukurlaşmış",
     serviceSlug: "pizza-firin-tasi-degisimi",
     serviceLabel: "Pizza Fırın Taşı Değişimi",
+  },
+  {
+    device: "Yüksek kapasiteli üretim fırını / tünel hattı",
+    symptom: "Pano arızası, faz dengesizliği, izolasyon kaybı, artan tüketim",
+    serviceSlug: "sanayi-tipi-firin-servisi",
+    serviceLabel: "Sanayi Tipi Fırın Servisi",
   },
   {
     device: "Bulaşıkhane, soğutma ve pişirme grubu birlikte",
