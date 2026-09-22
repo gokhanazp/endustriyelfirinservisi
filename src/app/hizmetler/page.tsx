@@ -30,7 +30,7 @@ import { Icon, IconAlert, IconArrow, IconCheck, IconPhone } from "@/components/I
 export const metadata: Metadata = buildMetadata({
   title: "Endüstriyel Fırın ve Mutfak Servis Hizmetleri | İstanbul",
   description:
-    "Konveksiyonel, kombi, sanayi tipi ve pizza fırınlarında yerinde arıza tespiti, onarım ve bakım. İstanbul'un 39 ilçesinde aynı gün servis. ☎ 0533 191 24 78",
+    "Konveksiyonel, kombi, sanayi tipi ve pizza fırınlarında yerinde arıza tespiti, onarım ve bakım. İstanbul'un 39 ilçesinde aynı gün servis. ☎ 0536 931 96 67",
   path: "/hizmetler",
   keywords: [
     "endüstriyel fırın servisi hizmetleri",

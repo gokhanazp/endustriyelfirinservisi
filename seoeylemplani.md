@@ -133,7 +133,7 @@ Mevcut : Hizmetlerimiz | Endüstriyel Fırın ve Mutfak Servisi | Endüstriyel F
 **Meta description** (150-158 karakter):
 ```
 Konveksiyonel, kombi, sanayi tipi ve pizza fırınlarında yerinde arıza tespiti,
-onarım ve periyodik bakım. İstanbul'un 39 ilçesinde aynı gün servis. ☎ 0533 191 24 78
+onarım ve periyodik bakım. İstanbul'un 39 ilçesinde aynı gün servis. ☎ 0536 931 96 67
 ```
 
 **H1:** `Endüstriyel Fırın ve Mutfak Ekipmanları Servis Hizmetleri` — mevcut hali iyi, koru.
@@ -236,7 +236,7 @@ Aşağıdakileri yerel ortamda `Ctrl+U` (sayfa kaynağını görüntüle) ile te
   "name": "Endüstriyel Fırın Servisi",
   "description": "İstanbul genelinde endüstriyel fırın servisi, tamiri ve endüstriyel mutfak bakım hizmetleri.",
   "url": "https://www.endustriyelfirinservisi.com",
-  "telephone": "+905331912478",
+  "telephone": "+905369319667",
   "priceRange": "$$",
   "image": "https://www.endustriyelfirinservisi.com/og-image.jpg",
   "address": {
@@ -353,7 +353,7 @@ Bu sektörde tıklamaların büyük kısmını **Google Harita paketi** alıyor.
 - [ ] Kategori: **birincil "Fırın tamir servisi"**, ikincil "Ticari mutfak ekipmanı servisi", "Elektrikli ev aletleri tamiri"
 - [ ] Adres doğrulaması (kartpostal / video). Ofis yoksa **hizmet alanı işletmesi (SAB)** olarak açın, adresi gizleyin, hizmet alanına İstanbul ilçelerini ekleyin
 - [ ] Çalışma saatleri sitedekiyle **birebir aynı** olsun (Ptesi-Cuma 08:00-20:00, Cmt 09:00-18:00)
-- [ ] Telefon: `0533 191 24 78` — sitede, GBP'de, dizinlerde **aynı formatta**
+- [ ] Telefon: `0536 931 96 67` — sitede, GBP'de, dizinlerde **aynı formatta**
 - [ ] Web sitesi linki
 - [ ] Hizmetler bölümüne 6 hizmetin tamamını girin
 - [ ] Ürünler bölümüne markaları ekleyin

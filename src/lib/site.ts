@@ -27,14 +27,14 @@ export const site = {
    * - raw     : uluslararasi format (JSON-LD semalari kullanir)
    */
   phone: {
-    display: "0533 191 24 78",
-    href: "tel:+905331912478",
-    raw: "+905331912478",
+    display: "0536 931 96 67",
+    href: "tel:+905369319667",
+    raw: "+905369319667",
   },
   whatsapp: {
-    display: "0533 191 24 78",
-    href: "https://wa.me/905331912478",
-    raw: "905331912478",
+    display: "0536 931 96 67",
+    href: "https://wa.me/905369319667",
+    raw: "905369319667",
   },
 
   /**
