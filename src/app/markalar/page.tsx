@@ -8,7 +8,7 @@ import { IconArrow } from "@/components/Icons";
 
 export const metadata: Metadata = buildMetadata({
   title: "Servis Verdiğimiz Markalar | Endüstriyel Fırın Servisi ve Tamiri",
-  description: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA ve daha fazlası — ${brands.length} marka için endüstriyel fırın servisi ve tamiri, orijinal yedek parça ve garantili işçilik.`,
+  description: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA, Fimak, Özköseoğlu, Turhan Çelik ve daha fazlası — ${brands.length} marka için endüstriyel fırın servisi ve tamiri, orijinal yedek parça ve garantili işçilik.`,
   path: "/markalar",
   keywords: [
     "electrolux fırın servisi",

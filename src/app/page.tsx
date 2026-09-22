@@ -57,7 +57,7 @@ const homeFaq = [
   },
   {
     q: "Hangi markalara servis veriyorsunuz?",
-    a: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA, Kayalar, Maksan, Venarro, Greenoks, Alveo, İnoxclass, Vital ve Ndustrio başta olmak üzere ${brands.length} marka için yetkin teknik servis hizmeti veriyoruz. Markası ne olursa olsun cihazınızın arızasını telefonda anlatmanız yeterlidir.`,
+    a: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA, Kayalar, Maksan, Venarro, Greenoks, Alveo, İnoxclass, Vital, Ndustrio, Fimak, Özköseoğlu ve Turhan Çelik başta olmak üzere ${brands.length} marka için yetkin teknik servis hizmeti veriyoruz. Markası ne olursa olsun cihazınızın arızasını telefonda anlatmanız yeterlidir.`,
   },
   {
     q: "Periyodik bakım sözleşmesi yapıyor musunuz?",

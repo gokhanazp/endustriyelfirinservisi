@@ -17,7 +17,7 @@
 export const pageDates = {
   "/": "2026-09-01",
   "/hizmetler": "2026-09-02",
-  "/markalar": "2026-09-02",
+  "/markalar": "2026-09-22",
   "/bolgeler": "2026-08-30",
   "/blog": "2026-09-01",
   "/hakkimizda": "2026-08-29",
@@ -51,6 +51,12 @@ export const brandDates: Record<string, string> = {
   "senoven-firin-servisi": "2026-09-02",
   "sgs-firin-servisi": "2026-09-02",
   "omake-firin-servisi": "2026-09-02",
+  "ozkoseoglu-firin-servisi": "2026-09-22",
+  "fimak-firin-servisi": "2026-09-22",
+  "altintop-firin-servisi": "2026-09-22",
+  "turhan-celik-firin-servisi": "2026-09-22",
+  "atalay-firin-servisi": "2026-09-22",
+  "furmaks-firin-servisi": "2026-09-22",
 };
 
 export const districtDatesDefault = "2026-08-30";

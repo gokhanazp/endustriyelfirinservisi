@@ -109,7 +109,7 @@ const commercial = [
   },
   {
     q: "Hangi markalara servis veriyorsunuz?",
-    a: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA, Kayalar, Maksan, Venarro, Greenoks, Alveo, İnoxclass, Vital ve Ndustrio dâhil ${brands.length} marka için yetkin teknik servis veriyoruz. Listede olmayan markalarda da cihaz tipine göre müdahale edebiliyoruz.`,
+    a: `Electrolux, Unox, İnoksan, Öztiryakiler, Pimak, Empero, Üçler, Ayfa, CSA, Kayalar, Maksan, Venarro, Greenoks, Alveo, İnoxclass, Vital, Ndustrio, Fimak, Özköseoğlu, Altıntop, Turhan Çelik, Atalay ve Furmaks dâhil ${brands.length} marka için yetkin teknik servis veriyoruz. Listede olmayan markalarda da cihaz tipine göre müdahale edebiliyoruz.`,
   },
   {
     q: "Fatura ve belge düzenliyor musunuz?",

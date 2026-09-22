@@ -1102,6 +1102,354 @@ export const brands: Brand[] = [
       ...commonBrandFaq("Omake"),
     ],
   },
+  {
+    slug: "ozkoseoglu-firin-servisi",
+    name: "Özköseoğlu",
+    aliases: ["Ozkoseoglu", "Özköseoğlu Isı", "Özköseoğlu Fırın Makinaları"],
+    origin: "Türkiye",
+    tagline:
+      "Çok katlı ekmek fırınları, döner arabalı ve siklotermik hatlarda ısı grubu uzmanlığı.",
+    repairNote:
+      "Özköseoğlu fırın tamiri, cihazların büyük hacimli ısı gruplarına sahip olması nedeniyle ısıtma zincirinin baştan sona ölçülmesiyle başlar: brülör veya rezistans grubu, sirkülasyon fanı, baca çekişi ve termostat kesme noktası sırayla kontrol edilir. Arızalı halka ölçümle kanıtlanmadan parça değişimi yapılmaz; bu yaklaşım hem maliyeti hem de duruş süresini düşürür.",
+    priceNote:
+      "Özköseoğlu fırın tamiri fiyatı; arızanın ısıtma grubunda mı, buhar hattında mı yoksa kontrol tarafında mı olduğuna göre belirlenir. Rezistans, termostat ve kontaktör gibi standart kalemlerde maliyet öngörülebilir olduğu için telefonda gerçekçi bir aralık verilebilir; buhar ve brülör grubunda kesin fiyat yerinde tespitten sonra netleşir.",
+    intro: [
+      "Özköseoğlu, fırıncılık sektörüne yönelik ısı ve pişirme ekipmanları üreten köklü Türk markalarındandır. Ekmek üretimi yapan işletmelerde çok katlı fırınlar, döner arabalı modeller ve siklotermik hatlar yaygın olarak kullanılır. Özköseoğlu fırın servisi ve tamiri çalışmalarımız, cihazın hangi ısı mimarisine sahip olduğunun belirlenmesiyle başlar; çünkü aynı şikâyet farklı gruplarda tamamen farklı bir arızaya işaret eder.",
+      "Ekmek fırınlarında en sık gelen şikâyet 'ürün eşit pişmiyor' başlığıdır. Bunun arkasında zayıflamış rezistans grubu, dengesiz sirkülasyon fanı, tıkanmış baca/hava kanalı veya kalibrasyonu kaymış termostat olabilir. Ekibimiz kat bazlı sıcaklık ölçümü yaparak farkın hangi bölgeden kaynaklandığını sayısal olarak ortaya koyar.",
+      "Buhar hattı, Özköseoğlu fırınlarında performansın ikinci belirleyicisidir. Kireç birikimi buhar jeneratörünü ve nozulları daraltarak kabuk parlaklığını düşürür. Onarımın yanı sıra cihaz girişindeki su yumuşatma çözümünü de kontrol eder, gerekiyorsa filtre ve reçine değişimini aynı serviste tamamlarız.",
+    ],
+    productLines: [
+      "Çok katlı (masif) ekmek fırınları",
+      "Döner arabalı fırınlar",
+      "Siklotermik ve borulu fırınlar",
+      "Konveksiyonel fırınlar",
+      "Mayalandırma (fermantasyon) kabinleri",
+      "Hamur hazırlık ve yoğurma grupları",
+    ],
+    commonFaults: [
+      {
+        title: "Katlar arasında pişme farkı",
+        text: "Zayıflamış rezistans grubu, dengesiz hava dağılımı ve kalibrasyonu kaymış termostat katlar arası sıcaklık farkı yaratır.",
+      },
+      {
+        title: "Buhar zayıf veya hiç gelmiyor",
+        text: "Kireçlenmiş buhar jeneratörü, tıkalı nozul, arızalı solenoid valf ve düşük şebeke basıncı buhar çevrimini keser.",
+      },
+      {
+        title: "Isıtma devreye girmiyor",
+        text: "Yanmış rezistans, bobini yanmış veya yapışmış kontaktör, emniyet termostatı kesmesi ve brülör kilitlenmesi ısı devresini durdurur.",
+      },
+      {
+        title: "Döner araba dönmüyor / takılıyor",
+        text: "Redüktör aşınması, zincir-kayış gevşemesi ve taban rulman grubundaki yıpranma araba dönüşünü bozarak pişirmeyi dengesizleştirir.",
+      },
+    ],
+    parts: [
+      "Rezistans grupları ve güç kontaktörü",
+      "Buhar jeneratörü, nozul ve solenoid valf",
+      "Sirkülasyon fan motoru ve kondansatör",
+      "Kapiler ve emniyet termostatı, sıcaklık probu",
+      "Döner araba redüktörü, zincir ve rulman seti",
+      "Kapı contası, menteşe ve kapı camı",
+    ],
+    faq: [
+      {
+        q: "Özköseoğlu ekmek fırınımda katlar arasında pişme farkı var, sebebi ne olabilir?",
+        a: "En sık üç neden görülür: o kata ait rezistans grubunun zayıflaması, hava dağılım kanalının veya baca çekişinin tıkanması ve termostat kalibrasyonunun kayması. Servis sırasında her kat ayrı ayrı sıcaklık ölçümüyle taranır; fark sayısal olarak belirlendikten sonra yalnızca ilgili gruba müdahale edilir.",
+      },
+      ...commonBrandFaq("Özköseoğlu"),
+    ],
+  },
+  {
+    slug: "fimak-firin-servisi",
+    name: "Fimak",
+    aliases: ["Fimak Fırın Makinaları", "Fimak Makina"],
+    origin: "Türkiye (Konya)",
+    tagline:
+      "Döner arabalı, siklotermik ve katlı fırın hatlarında ısıtma ve buhar sistemi servisi.",
+    repairNote:
+      "Fimak fırın tamiri, cihazın elektrikli mi yoksa yakma gruplu (siklotermik / borulu) model mi olduğunun ayrılmasıyla başlar. Elektrikli modellerde rezistans direnci ve kontaktör teması, yakma gruplu modellerde ise brülör ateşleme, baca çekişi ve ısı transfer hattı ölçülür. Doğru kolda ilerlemek tamir süresini belirgin şekilde kısaltır.",
+    priceNote:
+      "Fimak fırın tamiri fiyatı; arızanın ısıtma grubunda mı, buhar hattında mı yoksa tahrik/redüktör tarafında mı olduğuna göre değişir. Rezistans, kontaktör ve termostat gibi standart kalemlerde telefonda aralık verilebilir; brülör ve redüktör işlerinde kesin fiyat yerinde tespitten sonra paylaşılır.",
+    intro: [
+      "Fimak, Konya merkezli fırın makineleri üreticisi olarak ekmek ve unlu mamul üretimi yapan işletmelerde geniş bir kullanıcı tabanına sahiptir. Döner arabalı fırınlar, siklotermik ve borulu modeller, elektrikli katlı fırınlar ve konveksiyonel hatlar en sık servis verdiğimiz gruplardır. Fimak fırın servisi ve tamiri çalışmalarımız cihaz tipinin ve ısıtma mimarisinin doğru belirlenmesiyle başlar.",
+      "Döner arabalı modellerde performansın üç ayağı vardır: ısı üretimi, hava sirkülasyonu ve araba dönüşü. Bu üçünden biri bozulduğunda şikâyet çoğu zaman aynı şekilde gelir — 'ürün eşit pişmiyor'. Ekibimiz sıcaklık ölçümü, fan devri kontrolü ve redüktör-tahrik muayenesini birlikte yaparak farkın kaynağını ayırır.",
+      "Buhar sistemi Fimak fırınlarında kabuk kalitesini doğrudan belirler. Kireçlenmiş buhar hücresi ve tıkanmış nozullar püskürtmeyi zayıflatır; su sertliği yüksek bölgelerde bu arıza kısa aralıklarla tekrar eder. Onarımla birlikte su hazırlık tarafını da kontrol eder, tekrarın kök nedenini işletmeye yazılı olarak bildiririz.",
+    ],
+    productLines: [
+      "Döner arabalı fırınlar",
+      "Siklotermik ve borulu fırınlar",
+      "Elektrikli katlı fırınlar",
+      "Konveksiyonel fırınlar",
+      "Mayalandırma kabinleri ve klima üniteleri",
+      "Hamur yoğurma ve şekillendirme grupları",
+    ],
+    commonFaults: [
+      {
+        title: "Ürün eşit pişmiyor",
+        text: "Düşen fan devri, dengesiz hava kanalı ve araba dönüş hızındaki bozulma tepsiler arasında renk farkı yaratır.",
+      },
+      {
+        title: "Buhar püskürtme zayıf",
+        text: "Kireçlenmiş buhar hücresi, tıkalı nozul ve arızalı solenoid valf kabuk parlaklığını düşürür.",
+      },
+      {
+        title: "Brülör kilitleniyor / ateşleme yok",
+        text: "Kirli ateşleme elektrodu, iyonizasyon problemi, yetersiz baca çekişi ve gaz basıncı düşüklüğü yakma grubunu emniyete alır.",
+      },
+      {
+        title: "Redüktör ve tahrik sesi",
+        text: "Aşınan redüktör dişlisi, gevşeyen zincir ve yıpranmış rulman önce ses, ardından dönüş düzensizliği olarak ortaya çıkar.",
+      },
+    ],
+    parts: [
+      "Rezistans grupları ve güç kontaktörü",
+      "Buhar hücresi, nozul ve solenoid valf",
+      "Fan motoru, kondansatör ve fan kanadı",
+      "Brülör ateşleme elektrodu ve otomatı",
+      "Redüktör, zincir ve tahrik rulmanı",
+      "Termostat, sıcaklık probu ve kontrol kartı",
+    ],
+    faq: [
+      {
+        q: "Fimak döner arabalı fırınımda tepsiler arasında renk farkı oluşuyor, ne yapmalıyım?",
+        a: "Önce fan devri ve araba dönüş hızı ölçülür; bu ikisi düştüğünde sıcak hava tepsilere eşit dağılmaz. Ardından hava yönlendirme sacları ve buhar nozulları kontrol edilir. Ölçüm sonucuna göre çoğu vakada fan kondansatörü veya redüktör bakımıyla sorun tek ziyarette kapanır.",
+      },
+      ...commonBrandFaq("Fimak"),
+    ],
+  },
+  {
+    slug: "altintop-firin-servisi",
+    name: "Altıntop",
+    aliases: ["Altuntop", "Altintop", "Altuntop Isı ve Makina"],
+    origin: "Türkiye",
+    tagline:
+      "Döner arabalı ekmek fırınları ve ısı gruplarında mekanik ağırlıklı, yerinde servis.",
+    repairNote:
+      "Altıntop fırın tamiri, cihazların mekanik ağırlıklı yapısı sayesinde büyük ölçüde yerinde tamamlanır. Rezistans, kontaktör, termostat, fan grubu ve tahrik parçaları sahada değiştirilebildiği için işletmeyi ikinci bir ziyaret için bekletmeyiz.",
+    priceNote:
+      "Altıntop fırın tamiri fiyatı; değişecek parçaya ve müdahale süresine göre belirlenir. Rezistans, termostat ve kontaktör gibi standart kalemlerde maliyet öngörülebilir olduğundan telefonda gerçekçi bir aralık verilebilir; redüktör ve buhar grubu işlerinde fiyat yerinde tespitle netleşir.",
+    intro: [
+      "Altıntop (Altuntop), ekmek ve unlu mamul üretimine yönelik ısı ve fırın makineleri üreten Türk markalarındandır. Döner arabalı ekmek fırınları, katlı modeller ve mayalandırma kabinleri en çok servis verdiğimiz gruplardır. Altıntop fırın servisi ve tamiri hizmetimizde çoğu arıza tek serviste kapatılır; çünkü kritik parçaların önemli kısmı araç stoğumuzda bulunur.",
+      "Yoğun kullanımda en sık görülen sorunlar rezistans yanması, kontaktör teması bozulması, termostat kalibrasyon kayması ve fan rulmanı aşınmasıdır. Bu kalemlerin tamamı yerinde ölçülerek doğrulanır; parça, arıza ölçümle kanıtlanmadan değiştirilmez.",
+      "Döner arabalı modellerde tahrik grubu ayrı bir bakım başlığıdır. Redüktör yağ seviyesi, zincir gerginliği ve taban rulmanı düzenli kontrol edilmediğinde önce dönüş düzensizliği, ardından pişirme dengesizliği ortaya çıkar. Periyodik bakım ziyaretlerimizde bu kontroller standart olarak yapılır.",
+    ],
+    productLines: [
+      "Döner arabalı ekmek fırınları",
+      "Katlı ve taş tabanlı fırınlar",
+      "Konveksiyonel fırınlar",
+      "Mayalandırma (fermantasyon) kabinleri",
+      "Buhar üretim ve dağıtım grupları",
+      "Tava arabaları ve yardımcı ekipmanlar",
+    ],
+    commonFaults: [
+      {
+        title: "Rezistans yanması",
+        text: "Yoğun çalışma ve gerilim dalgalanmaları rezistans ömrünü kısaltır; direnç ölçümüyle arızalı grup tespit edilir.",
+      },
+      {
+        title: "Termostat sapması",
+        text: "Kapiler termostatlarda zamanla oluşan kayma, gösterge ile gerçek fırın sıcaklığı arasında fark yaratır.",
+      },
+      {
+        title: "Araba dönüşü düzensiz",
+        text: "Redüktör aşınması, gevşeyen zincir ve yıpranmış taban rulmanı dönüşü aksatarak pişirmeyi dengesizleştirir.",
+      },
+      {
+        title: "Isı kaçağı ve uzayan pişirme",
+        text: "Sertleşen kapı contası, ayarı bozulan menteşe ve yıpranmış izolasyon ısı kaybını artırır, enerji tüketimini yükseltir.",
+      },
+    ],
+    parts: [
+      "Rezistans grupları",
+      "Kapiler ve emniyet termostatı",
+      "Fan motoru ve rulman seti",
+      "Kontaktör ve termik röle",
+      "Redüktör, zincir ve tahrik parçaları",
+      "Kapı contası, menteşe ve izolasyon malzemesi",
+    ],
+    faq: [
+      {
+        q: "Altıntop mı Altuntop mu — servis talebimi hangi isimle iletmeliyim?",
+        a: "İki yazım da aynı markayı işaret ettiği için fark etmez; kayıt açarken cihazın etiket bilgisi esas alınır. Etiketteki model ve seri numarasını telefonda iletmeniz, teknisyenin doğru parçalarla yola çıkması için yeterlidir.",
+      },
+      ...commonBrandFaq("Altıntop"),
+    ],
+  },
+  {
+    slug: "turhan-celik-firin-servisi",
+    name: "Turhan Çelik",
+    aliases: ["Turhan Celik", "Turhançelik", "Turhan Çelik Endüstriyel Mutfak"],
+    origin: "Türkiye",
+    tagline:
+      "Kuzine, fritöz, konveksiyonel fırın ve setüstü pişirme gruplarında bütünleşik mutfak servisi.",
+    repairNote:
+      "Turhan Çelik fırın tamiri, markanın geniş mutfak ekipmanı yelpazesi nedeniyle çoğu zaman tek cihazla sınırlı kalmaz: fırın onarımıyla birlikte aynı hattaki kuzine, fritöz ve benmari grupları da kontrol edilir. Bu yaklaşım, işletmenin ikinci bir servis çağrısı açmasını önler.",
+    priceNote:
+      "Turhan Çelik fırın tamiri fiyatı; arızanın ısıtma grubunda mı, gaz/elektrik kontrol tarafında mı yoksa mekanik parçalarda mı olduğuna göre belirlenir. Aynı ziyarette birden fazla cihaza müdahale edildiğinde tek servis bedeli uygulanır, yalnızca parça maliyeti eklenir.",
+    intro: [
+      "Turhan Çelik, endüstriyel mutfak ekipmanları üreten ve otel, restoran, toplu yemek mutfaklarında yaygın kullanılan Türk markalarındandır. Konveksiyonel fırınlar, kuzine ocaklar, fritöz ve ızgara grupları ile paslanmaz hazırlık ekipmanları ürün yelpazesinin ana başlıklarıdır. Turhan Çelik fırın servisi ve tamiri çalışmalarımız, cihazın gazlı mı elektrikli mi olduğunun belirlenmesiyle başlar.",
+      "Gazlı modellerde arızaların önemli bölümü yakma grubunda toplanır: kirlenmiş brülör memesi, arızalı termokupl, gaz valfi ve ateşleme problemi. Elektrikli modellerde ise rezistans direnci, kontaktör teması ve termostat kesme noktası ölçülür. İki yolda da parça değişimi öncesi arızalı halka ölçümle doğrulanır.",
+      "Mutfak hattında fırınla birlikte çalışan fritöz, kuzine ve benmari grupları da aynı elektrik ve gaz altyapısını paylaşır. Tekrar eden arızaların arkasında çoğu zaman gevşemiş klemens bağlantıları veya yetersiz havalandırma bulunur; servis ziyaretlerimizde bu ortak noktalar da kontrol edilir.",
+    ],
+    productLines: [
+      "Konveksiyonel fırınlar",
+      "Kuzine ocak ve setüstü pişirme grupları",
+      "Fritöz, ızgara ve pleyt üniteleri",
+      "Benmari ve sıcak teşhir grupları",
+      "Paslanmaz hazırlık tezgâhları ve dolaplar",
+      "Davlumbaz ve havalandırma hatları",
+    ],
+    commonFaults: [
+      {
+        title: "Gazlı grupta alev sönmesi",
+        text: "Arızalı termokupl, kirlenmiş brülör memesi ve gaz valfi problemi alevin emniyete alınarak kesilmesine yol açar.",
+      },
+      {
+        title: "Isıtma yok, panel çalışıyor",
+        text: "Yanmış rezistans, bobini yanmış kontaktör ve kesmiş emniyet termostatı elektrikli modellerde ısıtma devresini durdurur.",
+      },
+      {
+        title: "Fan devri düşük, pişirme dengesiz",
+        text: "Zayıflamış kondansatör, yıpranmış rulman ve kirlenmiş fan kanadı hava debisini düşürerek tepsi farkı yaratır.",
+      },
+      {
+        title: "Kapı contası ve ısı kaçağı",
+        text: "Sertleşen conta ve ayarı bozulan menteşe ısı kaybını artırır, pişirme süresini ve enerji tüketimini yükseltir.",
+      },
+    ],
+    parts: [
+      "Rezistans grubu ve güç kontaktörü",
+      "Termokupl, gaz valfi ve brülör memesi",
+      "Kapiler ve emniyet termostatı",
+      "Fan motoru, kondansatör ve fan kanadı",
+      "Kapı contası, menteşe ve kilit mekanizması",
+      "Şalter, zaman rölesi ve tuş grubu",
+    ],
+    faq: [
+      {
+        q: "Turhan Çelik mutfağımda birden fazla cihaz arızalı, hepsine aynı gün bakabiliyor musunuz?",
+        a: "Evet. Fırın, kuzine, fritöz ve benmari gibi gruplar aynı ziyarette kontrol edilir ve mümkün olanlar aynı gün onarılır. Kayıt açarken arızalı cihazların listesini iletmeniz yeterlidir; teknisyen ilgili parçaları araçta bulundurarak yola çıkar.",
+      },
+      ...commonBrandFaq("Turhan Çelik"),
+    ],
+  },
+  {
+    slug: "atalay-firin-servisi",
+    name: "Atalay",
+    aliases: ["Atalay Mutfak", "Atalay Endüstriyel Mutfak"],
+    origin: "Türkiye",
+    tagline:
+      "Endüstriyel mutfak ve pişirme gruplarında tamir edilebilir mekanik yapı, hızlı yerinde müdahale.",
+    repairNote:
+      "Atalay fırın tamiri, cihazların sade ve mekanik ağırlıklı yapısı sayesinde çoğunlukla tek ziyarette tamamlanır. Rezistans, termostat, kontaktör ve fan grubu sahada ölçülüp değiştirilebildiği için işletmenin duruş süresi kısa tutulur.",
+    priceNote:
+      "Atalay fırın tamiri fiyatı; değişecek parça ve müdahale süresiyle doğrudan ilişkilidir. Standart kalemlerde telefonda gerçekçi bir aralık verilebilir; özel ölçü parça veya imalat gerektiren durumlarda fiyat yerinde tespitten sonra netleşir.",
+    intro: [
+      "Atalay, endüstriyel mutfak ve pişirme ekipmanları üreten Türk markalarındandır. Restoran, otel ve toplu yemek mutfaklarında fırın, ocak, fritöz ve hazırlık ekipmanlarıyla yaygın kullanılır. Atalay fırın servisi ve tamiri çalışmalarımızda öne çıkan avantaj, cihazların tamir edilebilir mekanik yapısıdır: doğru teşhis yapıldığında onarım hızlanır.",
+      "En sık karşılaştığımız başlıklar rezistans yanması, termostat kalibrasyon kayması, kontaktör teması bozulması ve fan rulmanı aşınmasıdır. Her biri yerinde elektriksel ölçümle doğrulanır; gösterge ile gerçek sıcaklık arasındaki fark termometre ile sayısal olarak ortaya konur.",
+      "Atalay cihazlarında elektriksel bağlantı noktalarının periyodik sıkılması önemli fark yaratır. Gevşeyen klemens bağlantıları ısınarak kablo ve terminal yanmalarına yol açar; bakım ziyaretlerimizde bu kontrol standart olarak yapılır ve termal kamera ile ısınan nokta varsa raporlanır.",
+    ],
+    productLines: [
+      "Konveksiyonel fırınlar",
+      "Pide ve lahmacun fırınları",
+      "Kuzine ocak ve setüstü pişirme grupları",
+      "Fritöz ve benmari üniteleri",
+      "Bulaşık ve yıkama grupları",
+      "Paslanmaz hazırlık ekipmanları",
+    ],
+    commonFaults: [
+      {
+        title: "Rezistans yanması",
+        text: "Yoğun çalışma ve gerilim dalgalanmaları rezistans ömrünü kısaltır; direnç ölçümüyle arızalı grup belirlenir.",
+      },
+      {
+        title: "Termostat sapması",
+        text: "Zamanla oluşan kalibrasyon kayması, gösterilen sıcaklık ile fırın içi gerçek sıcaklık arasında fark yaratır.",
+      },
+      {
+        title: "Kontaktör teması bozulması",
+        text: "Yapışan veya bobini yanan kontaktör, ısıtma devresini ya hiç açmaz ya da sürekli açık bırakır.",
+      },
+      {
+        title: "Fan rulmanı ve ses",
+        text: "Aşınan rulman önce ses, ardından devir düşüşü ve tepsiler arası pişirme farkı olarak kendini gösterir.",
+      },
+    ],
+    parts: [
+      "Rezistans grupları",
+      "Kapiler ve emniyet termostatı",
+      "Kontaktör ve termik röle",
+      "Fan motoru, kondansatör ve rulman seti",
+      "Kapı contası ve menteşe",
+      "Şalter, zaman rölesi ve kablo grubu",
+    ],
+    faq: [
+      {
+        q: "Atalay fırınımın göstergesi ile içerideki gerçek sıcaklık farklı, bu tamir edilir mi?",
+        a: "Evet. Fark çoğu vakada termostat kalibrasyon kaymasından kaynaklanır ve termostat değişimi ya da ayarıyla giderilir. Servis sırasında fırın içi sıcaklık bağımsız termometre ile ölçülür, fark sayısal olarak kayda geçirilir ve onarım sonrası doğrulama ölçümü tekrarlanır.",
+      },
+      ...commonBrandFaq("Atalay"),
+    ],
+  },
+  {
+    slug: "furmaks-firin-servisi",
+    name: "Furmaks",
+    aliases: ["Furmaks Mutfak", "Furmaks Endüstriyel Mutfak"],
+    origin: "Türkiye (İstanbul)",
+    tagline:
+      "Endüstriyel mutfak ekipmanları ve pişirme hatlarında komple mutfak bakım ve onarımı.",
+    repairNote:
+      "Furmaks fırın tamiri, markanın geniş mutfak ekipmanı yelpazesi nedeniyle hat bazlı ele alınır: fırın onarımıyla birlikte aynı elektrik ve gaz altyapısını paylaşan diğer gruplar da kontrol edilir. Böylece tekrar eden arızaların kök nedeni tek ziyarette ortaya çıkar.",
+    priceNote:
+      "Furmaks fırın tamiri fiyatı; arızanın ısıtma grubunda mı, kontrol tarafında mı yoksa mekanik parçalarda mı olduğuna göre belirlenir. Aynı ziyarette birden fazla cihaza müdahale edildiğinde tek servis bedeli uygulanır, yalnızca değişen parçalar ayrıca faturalanır.",
+    intro: [
+      "Furmaks, İstanbul merkezli endüstriyel mutfak ekipmanları markalarından biridir ve restoran, otel, pastane ile toplu yemek mutfaklarında geniş bir ürün yelpazesiyle kullanılır. Furmaks fırın servisi ve tamiri çalışmalarımız, cihazın gazlı mı elektrikli mi olduğunun ve kontrol tipinin belirlenmesiyle başlar.",
+      "Pişirme gruplarında en sık görülen arızalar rezistans yanması, kontaktör teması bozulması, termostat sapması ve fan grubunda devir düşüşüdür. Gazlı modellerde ise termokupl, brülör memesi ve gaz valfi öne çıkar. Her vakada parça değişimi öncesi arızalı halka ölçümle doğrulanır.",
+      "Yıkama ve hazırlık grupları aynı mutfakta fırınla birlikte çalıştığı için kireç, tıkanma ve tahliye sorunları da servis kapsamına alınır. Su sertliği yüksek bölgelerde arızaların tekrar etmemesi için su hazırlık tarafını kontrol eder, gerekli iyileştirmeyi işletmeye yazılı olarak öneririz.",
+    ],
+    productLines: [
+      "Konveksiyonel ve buharlı fırınlar",
+      "Pizza, pide ve lahmacun fırınları",
+      "Kuzine ocak ve setüstü pişirme grupları",
+      "Fritöz, ızgara ve pleyt üniteleri",
+      "Bulaşık ve bardak yıkama makineleri",
+      "Benmari, teşhir ve paslanmaz hazırlık ekipmanları",
+    ],
+    commonFaults: [
+      {
+        title: "Isıtma yok, panel çalışıyor",
+        text: "Yanmış rezistans, bobini yanmış veya yapışmış kontaktör ve kesmiş emniyet termostatı ısıtma devresini durdurur.",
+      },
+      {
+        title: "Gazlı grupta alev kesilmesi",
+        text: "Arızalı termokupl, kirlenmiş brülör memesi ve gaz valfi problemi alevin emniyete alınmasına yol açar.",
+      },
+      {
+        title: "Fan devri düşük, tepsi farkı",
+        text: "Zayıflamış kondansatör, yıpranmış rulman ve kirlenmiş fan kanadı hava dağılımını bozar.",
+      },
+      {
+        title: "Yıkama grubunda kireç ve tahliye sorunu",
+        text: "Kireçlenmiş rezistans, tıkalı püskürtme kolları ve arızalı tahliye pompası yıkama performansını düşürür.",
+      },
+    ],
+    parts: [
+      "Rezistans grubu ve güç kontaktörü",
+      "Termokupl, gaz valfi ve brülör memesi",
+      "Kapiler ve emniyet termostatı, sıcaklık probu",
+      "Fan motoru, kondansatör ve fan kanadı",
+      "Kapı contası, menteşe ve kilit mekanizması",
+      "Yıkama pompası, dozaj hortumu ve püskürtme kolu",
+    ],
+    faq: [
+      {
+        q: "Furmaks cihazımın yedek parçası bulunur mu?",
+        a: "Rezistans, termostat, kontaktör, prob ve fan motoru gibi sık değişen kalemleri araç ve depo stoğumuzda tutuyoruz; bu parçalarda müdahale genellikle tek ziyarette tamamlanır. Gövdeye özel parçalarda tedarik süresi ortalama 1-3 iş günüdür ve bu sürede cihazı kısıtlı da olsa çalışır durumda tutacak çözümler uygulanır.",
+      },
+      ...commonBrandFaq("Furmaks"),
+    ],
+  },
 ];
 
 export const brandSlugs = brands.map((b) => b.slug);
@@ -1222,6 +1570,40 @@ export const brandServiceMap: Record<string, string[]> = {
     "konveksiyonel-firin-servisi",
     "kombi-firin-servisi",
     "endustriyel-mutfak-servisi",
+  ],
+  "ozkoseoglu-firin-servisi": [
+    "sanayi-tipi-firin-servisi",
+    "donerli-firin-servisi",
+    "konveksiyonel-firin-servisi",
+    "endustriyel-firin-servisi",
+  ],
+  "fimak-firin-servisi": [
+    "donerli-firin-servisi",
+    "sanayi-tipi-firin-servisi",
+    "konveksiyonel-firin-servisi",
+    "endustriyel-firin-servisi",
+  ],
+  "altintop-firin-servisi": [
+    "donerli-firin-servisi",
+    "sanayi-tipi-firin-servisi",
+    "endustriyel-firin-servisi",
+  ],
+  "turhan-celik-firin-servisi": [
+    "konveksiyonel-firin-servisi",
+    "endustriyel-mutfak-servisi",
+    "pide-lahmacun-firin-servisi",
+    "endustriyel-firin-servisi",
+  ],
+  "atalay-firin-servisi": [
+    "konveksiyonel-firin-servisi",
+    "endustriyel-mutfak-servisi",
+    "pide-lahmacun-firin-servisi",
+  ],
+  "furmaks-firin-servisi": [
+    "konveksiyonel-firin-servisi",
+    "endustriyel-mutfak-servisi",
+    "pizza-firini-servisi",
+    "endustriyel-firin-servisi",
   ],
 };
 
